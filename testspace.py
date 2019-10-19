@@ -9,7 +9,7 @@ for i in pins:
 
 try:
 	while True:
-		for i in pins:
+		for i in (2,27,11,13):
 			if iop.input(i)==0:
 				print ("Closed")
 			else:
