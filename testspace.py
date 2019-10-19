@@ -15,6 +15,7 @@ try:
 	while True:
 		if iop.input(2)==0:
 			print ("Closed")
+			iop.cleanup()
 		elif iop.input(13)==0:
 			iop.cleanup()
 		else:
