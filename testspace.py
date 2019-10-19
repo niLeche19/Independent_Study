@@ -10,9 +10,9 @@ for i in pins:
 try:
 	while True:
 		for i in pins:
-		if iop.input(i)==0:
-			print ("Closed")
-		else:
-			print ("Open")
+			if iop.input(i)==0:
+				print ("Closed")
+			else:
+				print ("Open")
 finally:
 	iop.cleanup()
