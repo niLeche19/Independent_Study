@@ -15,11 +15,8 @@ try:
 	while True:
 		if iop.input(2)==0:
 			print ("Closed")
-<<<<<<< HEAD
 			sleep(0.1)
-=======
 			iop.cleanup()
->>>>>>> 8f8e414e53f9706e0f097d3539c047e9f1b2862f
 		elif iop.input(13)==0:
 			print ("pin13!")
 			sleep(0.1)
