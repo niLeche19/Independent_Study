@@ -7,15 +7,16 @@ pins = (2,3,4,17,22,27,10,9,11,5,6,13,19,26,21,20)
 #	print (i)
 
 for i in pins:
-	iop.setup(i, iop.IN)
+	iop.setup(i, iop.IN, pull_up_down=iop.PUD_UP)
 #	print ("pin " + str(i) + "is setup :)")
-
+#iop.setup(2, iop.IN)
+sleep(1)
 try:
 	while True:
 		if iop.input(2)==0:
 			print ("Closed")
 		else:
 			print ("Open")
-		sleep(0.2)
+		sleep(0.1)
 finally:
 	iop.cleanup()
