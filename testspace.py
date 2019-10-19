@@ -11,15 +11,7 @@ for i in pins:
 
 try:
 	while True:
-<<<<<<< HEAD
-		for i in (2,27,11,13):
-			if iop.input(i)==0:
-				print ("Closed")
-			else:
-				print ("Open")
-=======
 		if iop.input(2)==1:
 			print ("Closed")
->>>>>>> 4b2ba74ee0ae92193c805b823010a744515bb9da
 finally:
 	iop.cleanup()
