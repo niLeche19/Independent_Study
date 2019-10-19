@@ -15,8 +15,10 @@ try:
 	while True:
 		if iop.input(2)==0:
 			print ("Closed")
+		elif iop.input(13)==0:
+			iop.cleanup()
 		else:
 			print ("Open")
-		sleep(0.1)
+			sleep(0.1)
 finally:
 	iop.cleanup()
