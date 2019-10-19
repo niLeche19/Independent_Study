@@ -16,8 +16,7 @@ try:
 		if iop.input(2)==0:
 			print ("Closed")
 			sleep(0.1)
-			iop.cleanup()
-		elif iop.input(13)==0:
+		elif iop.input(27)==0:
 			print ("pin13!")
 			sleep(0.1)
 		else:
