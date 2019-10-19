@@ -15,10 +15,12 @@ try:
 	while True:
 		if iop.input(2)==0:
 			print ("Closed")
+			sleep(0.1)
 		elif iop.input(13)==0:
-			iop.cleanup()
+			print ("pin13!")
+			sleep(0.1)
 		else:
 			print ("Open")
 			sleep(0.1)
 finally:
-	iop.cleanup()
+	print ("Goodbye!")
