@@ -33,15 +33,15 @@ try:
 			if iop.input(i)==0:
 				pressed = 1
 				keysdown.append(i)
-				
+				print(lstscn(keysdown, i))
 				if lstscn (keysdown, i):
 					print (i)
-		if pressed == 3:
-			print ("Open")
+		if pressed == 0:
+			print ("All open")
 		else:
 			print (keysdown)
 
-		sleep(0.06)
+		sleep(0.2)
 		
 		"""
 		if iop.input(27)==0:
