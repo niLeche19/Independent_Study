@@ -16,7 +16,7 @@ keysdown = []
 def lstscn (l, n):
 	fls = 0
 	
-	if len(l) != 0:
+	if l != []:
 		for i in l:
 			if i == n:
 				return (True)
