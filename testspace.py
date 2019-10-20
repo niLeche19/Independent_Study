@@ -12,15 +12,28 @@ sleep(3)
 tstpins = (2,11,13,27)
 keysdown = []
 
+
+def lstscn (l, n):
+	try:
+		for i in l:
+			if i == n:
+				return	(True)
+				break
+	finally:
+		return (False)
+		
+
 try:
 	while True:
 		pressed = 0
 		keysdown = []
 		for i in tstpins:
 			if iop.input(i)==0:
-				#print ("Key " + str(i) + " pressed")
 				pressed = 1
 				keysdown.append(i)
+				
+				if lstscn (keysdown, i):
+					print (i)
 		if pressed == 0:
 			print ("Open")
 		else:
