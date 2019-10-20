@@ -18,6 +18,9 @@ try:
 		elif iop.input(2)==0:
 			print ("pin2!")
 			sleep(0.1)
+		elif iop.input(13)==0:
+			print ("pin13!")
+			sleep(0.1)
 		else:
 			print ("Open")
 			sleep(0.1)
