@@ -14,12 +14,14 @@ keysdown = []
 
 
 def lstscn (l, n):
-	try:
+	fls = 0
+	
+	if len(l) != 0:
 		for i in l:
 			if i == n:
-				return	(True)
-				break
-	finally:
+				return (True)
+				fls = 1
+	if fls == 0:
 		return (False)
 		
 
@@ -34,7 +36,7 @@ try:
 				
 				if lstscn (keysdown, i):
 					print (i)
-		if pressed == 0:
+		if pressed == 3:
 			print ("Open")
 		else:
 			print (keysdown)
