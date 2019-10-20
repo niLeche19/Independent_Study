@@ -10,15 +10,17 @@ for i in pins:
 
 sleep(3)
 tstpins = (2,11,13,27)
+
 try:
 	while True:
+		pressed = 0
 		for i in tstpins:
 			if iop.input(i)==0:
 				print ("Key " + str(i) + " pressed")
-				sleep(0.1)
-			else:
-				print ("open")
-				sleep(0.1)
+				pressed = 1
+		if pressed == 0:
+			print ("Open")
+		sleep(0.1)
 		
 		"""
 		if iop.input(27)==0:
