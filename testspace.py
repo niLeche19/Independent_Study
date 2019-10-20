@@ -3,21 +3,20 @@ from time import sleep
 import RPi.GPIO as iop
 iop.setmode(iop.BCM)
 pins = (27,2,3,4,17,22,10,9,11,5,6,13,19,26,21,20)
-#for i in pins:
-#	print (i)
 
 for i in pins:
 	iop.setup(i, iop.IN, pull_up_down=iop.PUD_UP)
-#	print ("pin " + str(i) + "is setup :)")
-#iop.setup(2, iop.IN)
-sleep(1)
+	print ("pin " + str(i) + "is setup :)")
+
+sleep(3)
+
 try:
 	while True:
-		if iop.input(2)==0:
+		if iop.input(27)==0:
 			print ("Closed")
 			sleep(0.1)
-		if iop.input(27)==0:
-			print ("pin13!")
+		elif iop.input(2)==0:
+			print ("pin2!")
 			sleep(0.1)
 		else:
 			print ("Open")
