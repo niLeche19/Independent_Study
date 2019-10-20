@@ -19,10 +19,10 @@ def lstscn (l, n):
 	if len(l) != 0:
 		for i in l:
 			if i == n:
-				return (True)
+				return (False)
 				fls = 1
 	if fls == 0:
-		return (False)
+		return (True)
 		
 
 try:
@@ -32,10 +32,10 @@ try:
 		for i in tstpins:
 			if iop.input(i)==0:
 				pressed = 1
-				keysdown.append(i)
 				print(lstscn(keysdown, i))
 				if lstscn (keysdown, i):
 					print (i)
+				keysdown.append(i)
 		if pressed == 0:
 			print ("All open")
 		else:
