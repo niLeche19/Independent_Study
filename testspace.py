@@ -19,7 +19,7 @@ def lstscn (l, n):
 	if len(l) != 0:
 		for i in l:
 			if i == n:
-				return (False)
+				return (True)
 				fls = 1
 	if fls == 0:
 		return (False)
