@@ -29,10 +29,15 @@ try:
 		pressed = 0
 		keysdown = []
 		for i in tstpins:
+			fals = 0
 			if iop.input(i)==0:
 				pressed = 1
-				print(lstscn(keysdown, 27))
-				if lstscn (keysdown, i):
+				print(lstscn(keysdown, 27), keysdown, i)
+				if keysdown != []:
+					for h in keysdown:
+						if i == h:
+							fals = 1
+				if fals == 0:
 					print (i)
 				keysdown.append(i)
 		if pressed == 0:
