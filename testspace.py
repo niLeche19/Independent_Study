@@ -8,7 +8,6 @@ for i in pins:
 	iop.setup(i, iop.IN, pull_up_down=iop.PUD_UP)
 	print ("pin " + str(i) + "is setup :)")
 
-sleep(3)
 tstpins = (2,11,13,27)
 keysdown = []
 
@@ -32,7 +31,7 @@ try:
 		for i in tstpins:
 			if iop.input(i)==0:
 				pressed = 1
-				print(lstscn(keysdown, 13))
+				print(lstscn(keysdown, 11))
 				if lstscn (keysdown, i):
 					print (i)
 				keysdown.append(i)
