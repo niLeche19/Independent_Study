@@ -31,7 +31,7 @@ try:
 		for i in tstpins:
 			if iop.input(i)==0:
 				pressed = 1
-				print(lstscn(keysdown, 11))
+				print(lstscn(keysdown, 27))
 				if lstscn (keysdown, i):
 					print (i)
 				keysdown.append(i)
