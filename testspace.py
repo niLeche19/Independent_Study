@@ -32,7 +32,6 @@ try:
 			fals = 0
 			if iop.input(i)==0:
 				pressed = 1
-				print(lstscn(keysdown, 27), keysdown, i)
 				if keysdown != []:
 					for h in keysdown:
 						if i == h:
@@ -40,6 +39,8 @@ try:
 				if fals == 0:
 					print (i)
 				keysdown.append(i)
+				print(lstscn(keysdown, 27), keysdown, i)
+
 		if pressed == 0:
 			print ("All open")
 		else:
