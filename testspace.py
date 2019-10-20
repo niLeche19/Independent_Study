@@ -39,12 +39,12 @@ try:
 				if fals == 0:
 					print (i)
 				keysdown.append(i)
-				print(lstscn(keysdown, 27), keysdown, i)
+				print(lstscn(keysdown, i), keysdown, i)
 
 		if pressed == 0:
 			print ("All open")
-		else:
-			print (keysdown)
+		#else:
+		#	print (keysdown)
 
 		sleep(0.2)
 		
