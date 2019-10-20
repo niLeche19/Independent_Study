@@ -22,7 +22,7 @@ def lstscn (l, n):
 				return (False)
 				fls = 1
 	if fls == 0:
-		return (True)
+		return (False)
 		
 
 try:
