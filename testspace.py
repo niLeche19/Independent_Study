@@ -27,9 +27,9 @@ def lstscn (l, n):
 try:
 	while True:
 		pressed = 0
-		keysdown = []
+		print(keysdown)
 		for i in tstpins:
-			fals = 0
+			fals = 1
 			if iop.input(i)==0:
 				pressed = 1
 				if keysdown != []:
@@ -39,14 +39,19 @@ try:
 				if fals == 0:
 					print (i)
 				keysdown.append(i)
-				print(lstscn(keysdown, i), keysdown, i)
+			if iop.input(i)==1:
+				if keysdown != []:
+					for j in keysdown:
+						if i == j:
+							keysdown.remove(j)
+		print(lstscn(keysdown, i), keysdown, i)
 
 		if pressed == 0:
 			print ("All open")
 		#else:
 		#	print (keysdown)
 
-		sleep(0.2)
+		sleep(0.1)
 		
 		"""
 		if iop.input(27)==0:
