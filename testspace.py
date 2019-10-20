@@ -26,7 +26,7 @@ try:
 		else:
 			print (keysdown)
 
-		sleep(0.1)
+		sleep(0.06)
 		
 		"""
 		if iop.input(27)==0:
