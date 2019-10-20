@@ -21,9 +21,11 @@ try:
 				#print ("Key " + str(i) + " pressed")
 				pressed = 1
 				keysdown.append(i)
-		print (keysdown)
 		if pressed == 0:
 			print ("Open")
+		else:
+			print (keysdown)
+
 		sleep(0.1)
 		
 		"""
