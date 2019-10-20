@@ -10,14 +10,18 @@ for i in pins:
 
 sleep(3)
 tstpins = (2,11,13,27)
+keysdown = []
 
 try:
 	while True:
 		pressed = 0
+		keysdown = []
 		for i in tstpins:
 			if iop.input(i)==0:
-				print ("Key " + str(i) + " pressed")
+				#print ("Key " + str(i) + " pressed")
 				pressed = 1
+				keysdown.append(i)
+		print (keysdown)
 		if pressed == 0:
 			print ("Open")
 		sleep(0.1)
