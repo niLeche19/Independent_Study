@@ -43,15 +43,16 @@ try:
 					keysdown.remove(i)
 		
 		#print (lstscn(keysdown, i), keysdown, i)
-
+		
+		"""
 		if pressed == 0:
 			print ("All open")
-		#else:
-		#	print (keysdown)
+		else:
+			print (keysdown)
 
 		sleep(0.1)
 		
-		"""
+		
 		if iop.input(27)==0:
 			print ("Closed")
 			sleep(0.1)
