@@ -18,33 +18,33 @@ def lstscn (l, n):
 	if l != []:
 		for i in l:
 			if i == n:
-				return (True)
 				fls = 1
 	if fls == 0:
 		return (False)
+	else:
+		return (True)
 		
 
 try:
 	while True:
+		lstscn((1,2,3,4), 4)
 		pressed = 0
 		print(keysdown)
 		for i in tstpins:
 			fals = 1
 			if iop.input(i)==0:
 				pressed = 1
-				if keysdown != []:
-					for h in keysdown:
-						if i == h:
-							fals = 1
-				if fals == 0:
+				if lstscn (keysdown, i) == False:
 					print (i)
-				keysdown.append(i)
-			if iop.input(i)==1:
-				if keysdown != []:
+					keysdown.append(i)
+					
+			elif iop.input(i)==1:
+				if lstscn(keysdown, i) == True:
 					for j in keysdown:
 						if i == j:
 							keysdown.remove(j)
-		print(lstscn(keysdown, i), keysdown, i)
+		
+		print (lstscn(keysdown, i), keysdown, i)
 
 		if pressed == 0:
 			print ("All open")
