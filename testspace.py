@@ -8,7 +8,7 @@ Project: Macro keyboard							#
 
 from time import sleep
 import RPi.GPIO as iop
-import pyautoguy as pag
+import pyautogui as pag
 
 iop.setmode(iop.BCM)
 pins = (27,2,3,4,17,22,10,9,11,5,6,13,19,26,21,20)
