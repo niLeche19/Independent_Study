@@ -17,8 +17,8 @@ keysdown = []
 
 for i in pins:
 	iop.setup(i, iop.IN, pull_up_down=iop.PUD_UP)
-	print ("pin " + str(i) + "is setup :)")
-
+print ("Pins are all setup :)")
+print ("Your program is starting now")
 def lstscn (l, n):
 	fls = 0
 	
