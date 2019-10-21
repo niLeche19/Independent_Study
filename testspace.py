@@ -40,9 +40,7 @@ try:
 					
 			elif iop.input(i)==1:
 				if lstscn(keysdown, i) == True:
-					for j in keysdown:
-						if i == j:
-							keysdown.remove(j)
+					keysdown.remove(i)
 		
 		print (lstscn(keysdown, i), keysdown, i)
 
