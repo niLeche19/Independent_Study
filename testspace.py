@@ -29,7 +29,7 @@ try:
 	while True:
 		lstscn((1,2,3,4), 4)
 		pressed = 0
-		print(keysdown)
+		#print(keysdown)
 		for i in tstpins:
 			fals = 1
 			if iop.input(i)==0:
@@ -42,7 +42,7 @@ try:
 				if lstscn(keysdown, i) == True:
 					keysdown.remove(i)
 		
-		print (lstscn(keysdown, i), keysdown, i)
+		#print (lstscn(keysdown, i), keysdown, i)
 
 		if pressed == 0:
 			print ("All open")
