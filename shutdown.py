@@ -2,8 +2,8 @@ import RPi.GPIO as iop
 from time import sleep
 from os import system
 
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(20, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+iop.setmode(iop.BCM)
+iop.setup(20, iop.IN, pull_up_down=iop.PUD_UP)
 while True:
 	if iop.input(20) == 0:
 		sleep(1)
