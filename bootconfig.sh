@@ -27,7 +27,7 @@ mkdir functions/hid.usb0
 echo 1 > functions/hid.usb0/protocol
 echo 8 > functions/hid.usb0/report_length # 8-byte reports
 echo 1 > functions/hid.usb0/subclass
-echo "05010906a101050719e029e71500250175019508810275089501810175019503050819012903910275019505910175089506150026ff00050719002aff008100c0" | sudo tee xxd -r -ps > functions/hid.usb0/report_desc
+echo "05010906a101050719e029e71500250175019508810275089501810175019503050819012903910275019505910175089506150026ff00050719002aff008100c0" | xxd -r -ps > functions/hid.usb0/report_desc
 # echo "..." > functions/hid.usb0/report_desc # Check second post
 
 # Create configuration
