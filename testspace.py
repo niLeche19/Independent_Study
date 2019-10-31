@@ -11,14 +11,13 @@ import RPi.GPIO as iop
 #import pyautogui as pag
 
 iop.setmode(iop.BCM)
-pins = (27,2,3,4,17,22,10,9,11,5,6,13,19,26,21,20)
+pins = (27,2,3,4,17,22,10,9,11,5,6,13,26,21,20)
 tstpins = (2,11,13,27)
 keysdown = []
 
 for i in pins:
 	iop.setup(i, iop.IN, pull_up_down=iop.PUD_UP)
-print ("Pins are all setup :)")
-print ("Your program is starting now")
+
 def lstscn (l, n):
 	fls = 0
 	
