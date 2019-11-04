@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Create gadget
+cd
 mkdir /sys/kernel/config/usb_gadget/macroboy
 cd /sys/kernel/config/usb_gadget/macroboy
 

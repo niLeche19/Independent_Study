@@ -21,8 +21,8 @@ print ("Pins are set up, starting now :)")
 def lstscn (l, n):
 	fls = 0
 	
-	if l != []:
-		for i in l:
+	if l != []: #check for empty list
+		for i in l: #scan list to see if key is already pressed
 			if i == n:
 				fls = 1
 	if fls == 0:
@@ -32,17 +32,19 @@ def lstscn (l, n):
 
 try:
 	while True:
-		pressed = 0
+		#pressed = 0
 		
 		for i in tstpins:
 			fals = 1
-			if iop.input(i)==0:
-				pressed = 1
+			if iop.input(i)==0: #checks list for pressed keys
+				#pressed = 1
 				if lstscn (keysdown, i) == False:
 					print (i)
+					if i == 2:
+						os sudo python hidtest.py
 					keysdown.append(i)
 					
-			elif iop.input(i)==1:
+			elif iop.input(i)==1: #checks list for released keys
 				if lstscn(keysdown, i) == True:
 					keysdown.remove(i)
 
