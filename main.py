@@ -22,7 +22,7 @@ for i in pins:
 print ("Pins are set up, starting now :)")
 
 def writeit(report):
-    with open('/dev/hidg0', 'rb+') as fd:
+    with open('/dev/hidg0', 'wb+') as fd:
         fd.write(report.encode())
 	
 def sendit(mod, charr):

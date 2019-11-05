@@ -29,7 +29,10 @@ write_report "\0\0\x12\0\0\0\0\0"
 
 # $
 write_report "\x20\0\x21\0\0\0\0\0"
-write_report "\0\xe8\0\0\0\0\0\0"
+#write_report "\0\xe8\0\0\0\0\0\0"
+write_report "\0\0\xcd\0\0\0\0\0"
+write_report "\0\0\xb0\0\0\0\0\0"
+write_report "\0\0\xb1\0\0\0\0\0"
 write_report "\0\0\xe8\0\0\0\0\0"
 
 # l
