@@ -7,6 +7,7 @@ Project: Macro keyboard							#
 """
 
 from time import sleep
+from os import system
 import RPi.GPIO as iop
 #import pyautogui as pag
 
@@ -36,12 +37,12 @@ try:
 		
 		for i in tstpins:
 			fals = 1
-			if iop.input(i)==0: #checks list for pressed keys
+			if iop.input(i) == 0: #checks list for pressed keys
 				#pressed = 1
 				if lstscn (keysdown, i) == False:
 					print (i)
 					if i == 2:
-						os sudo python hidtest.py
+						system('sudo python hidtest.py')
 					keysdown.append(i)
 					
 			elif iop.input(i)==1: #checks list for released keys
