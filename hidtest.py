@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 from time import sleep
-sleep(2)
 NULL_CHAR = chr(0)
 
 def write_report(report):
