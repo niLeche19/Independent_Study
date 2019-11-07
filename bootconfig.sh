@@ -19,7 +19,7 @@ echo 0x1d6b > idVendor # Linux Foundation
 mkdir strings/0x409
 
 echo "Nick Lee" > strings/0x409/manufacturer
-echo "Independent study macro keyboard" > strings/0x409/product
+echo "Nick's Macro Keyboard" > strings/0x409/product
 echo "0123456789" > strings/0x409/serialnumber
 
 # Create HID function
