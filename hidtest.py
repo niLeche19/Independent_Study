@@ -17,7 +17,7 @@ write_report(NULL_CHAR*2+chr(8)+NULL_CHAR*5)
 write_report(NULL_CHAR*2+chr(15)+NULL_CHAR*5)
 write_report(NULL_CHAR*8)
 write_report(NULL_CHAR*2+chr(15)+NULL_CHAR*5)
-write_report(NULL_CHAR*2+chr(4a)+NULL_CHAR*5)
+write_report(NULL_CHAR*2+chr(0cd)+NULL_CHAR*5)
 # o
 write_report(NULL_CHAR*2+chr(18)+NULL_CHAR*5)
 
