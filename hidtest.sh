@@ -27,8 +27,8 @@ write_report "\x20\0\x1a\0\0\0\0\0"
 # o
 write_report "\0\0\x12\0\0\0\0\0"
 
-# r
-write_report "\0\0\x21\0\0\0\0\0"
+# $
+write_report "\x20\0\x21\0\0\0\0\0"
 
 # l
 write_report "\0\0\xf\0\0\0\0\0"
