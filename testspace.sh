@@ -4,7 +4,7 @@ function write_report {
     echo -ne $1 > /dev/hidg0
 }
 """
-declare -r pins = (2 3 4 17 27 22 10 9 11 20 5 6 13 19 26 21)
+pins=(2 3 4 17 27 22 10 9 11 20 5 6 13 19 26 21)
 
 for i in ${pins[@]}; do
 	echo "$i" > /sys/class/gpio/export
