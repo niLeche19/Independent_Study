@@ -6,14 +6,9 @@
 
 pins=(2 3 4 17 27 22 10 9 11 20 5 6 13 19 26 21)
 
-for i in ${pins[@]}; do
-	echo "$i" > /sys/class/gpio/export
-	echo "in" > /sys/class/gpio/gpio$i/direction
-done
-
 printf "all the pins are setup"
 
-while true; do
+while [1 == "$(</sys/class/gpio/gpio13/value)"]; do
 	for f in ${pins[@]}; do
 		if [0 == "$(</sys/class/gpio/gpio"$f"/value)" ]; then
 			printf "pin $f is down"
