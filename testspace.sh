@@ -12,7 +12,7 @@ printf "all the pins are setup"
 while true; do
 	for f in ${pins[@]}; do
 		if [ 1=="$(</sys/class/gpio/gpio"$f"/value)" ]; then
-			printf "pin $f is down"
+			printf "pin $f is down\n"
 		fi
 	done
 	sleep 0.05
