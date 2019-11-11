@@ -44,3 +44,8 @@ ln -s functions/hid.usb0 configs/c.1
 
 # Enable gadget
 ls /sys/class/udc > UDC
+
+for i in 27 2 3 4 17 22 10 9 11 5 6 13 26 21
+do
+  echo i > /sys/class/gpio/export
+done
