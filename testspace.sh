@@ -11,7 +11,7 @@ printf "all the pins are setup"
 #while $[0==$(</sys/class/gpio/gpio13/value)]; do
 while true; do
 	for f in ${pins[@]}; do
-		if [ 1=="$(</sys/class/gpio/gpio"$f"/value)" ]; then
+		if [ 1 == "$(</sys/class/gpio/gpio"$f"/value)" ]; then
 			printf "pin $f is down\n"
 		else
 			printf "CLOSED\n"
