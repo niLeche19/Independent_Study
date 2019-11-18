@@ -43,7 +43,7 @@ def five():
 def nine():
 	sendit(16, 26)
 def thirteen():
-	print(13)
+	sendit(0, 205)
 	
 functions = (one, five, nine, thirteen) # list of key functions
 	
@@ -69,12 +69,7 @@ try:
 			if iop.input(newi) == 0: #checks list for pressed keys
 				#pressed = 1
 				if lstscn (keysdown, newi) == False:
-					print (str(newi) + "yip dip")
 					functions[i]()
-					"""
-					if newi == 2:
-						system('sudo python hidtest.py')
-					"""
 					keysdown.append(newi)
 					
 			elif iop.input(newi)==1: #checks list for released keys
