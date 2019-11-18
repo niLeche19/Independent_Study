@@ -43,7 +43,7 @@ def five():
 def nine():
 	sendit(16, 26)
 def thirteen():
-	sendit(0, 205)
+	sendit(0, 232)
 	
 functions = (one, five, nine, thirteen) # list of key functions
 	
