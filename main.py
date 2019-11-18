@@ -31,6 +31,7 @@ def sendit(mod, charr):
 		writeit(chr(0)*8)
 	else:
 		writeit(chr(mod) + chr(0) + chr(charr) + chr(0)*5)
+		writeit(chr(0)*8)
 
 # define each set of strokes for each key hear:
 def one():
