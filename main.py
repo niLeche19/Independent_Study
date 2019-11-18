@@ -28,10 +28,15 @@ def writeit(report):
 def sendit(mod, charr):
 	if mod == 0:
 		writeit(chr(0)*2 + chr(charr) + chr(0)*5)
+		writeit(chr(0)*8)
+	else:
+		writeit(chr(mod) + chr(0) + chr(charr) + chr(0)*5)
 
 # define each set of strokes for each key hear:
 def one():
 	sendit(0, 30)
+	sendit(32, 30)
+
 def five():
 	print(1)
 def nine():
