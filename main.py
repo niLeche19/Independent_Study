@@ -29,7 +29,7 @@ def nine():
 	print(9)
 def thirteen():
 	print(13)
-functions = (one, five, nine, thriteen)
+functions = (one, five, nine, thirteen)
 
 def lstscn (l, n):
 	fls = 0
