@@ -39,9 +39,9 @@ def one():
 	sendit(32, 30)
 
 def five():
-	print(1)
+	sendit(16, 23)
 def nine():
-	print(9)
+	sendit(16, 26)
 def thirteen():
 	print(13)
 	
