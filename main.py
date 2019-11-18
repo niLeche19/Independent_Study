@@ -9,9 +9,10 @@ Project: Macro keyboard							#
 from time import sleep
 from os import system
 import RPi.GPIO as iop
-#import pyautogui as pag
 
 iop.setmode(iop.BCM)
+NULL_CHAR = chr(0)
+
 pins = (27,2,3,4,17,22,10,9,11,5,6,13,26,21,20)
 tstpins = (2,27,11,13)
 keysdown = []
@@ -20,17 +21,26 @@ for i in pins:
 	iop.setup(i, iop.IN, pull_up_down=iop.PUD_UP)
 print ("Pins are set up, starting now :)")
 
+def writeit(report):
+    with open('/dev/hidg0', 'rb+') as fd:
+        fd.write(report.encode())
+	
+def sendit(mod, charr):
+	if mod == 0:
+		writeit(chr(0)*2 + chr(charr) + chr(0)*5)
+
 # define each set of strokes for each key hear:
 def one():
-	print(1)
+	sendit(0, 30)
 def five():
 	print(1)
 def nine():
 	print(9)
 def thirteen():
 	print(13)
-functions = (one, five, nine, thirteen)
-
+	
+functions = (one, five, nine, thirteen) # list of key functions
+	
 def lstscn (l, n):
 	fls = 0
 	
