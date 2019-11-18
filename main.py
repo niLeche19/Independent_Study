@@ -53,7 +53,7 @@ try:
 			if iop.input(newi) == 0: #checks list for pressed keys
 				#pressed = 1
 				if lstscn (keysdown, newi) == False:
-					print (newi + "yip dip")
+					print (str(newi) + "yip dip")
 					functions[i]()
 					"""
 					if newi == 2:
