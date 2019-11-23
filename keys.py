@@ -12,7 +12,7 @@ def sendit(mod, charr):
 		writeit(chr(mod) + chr(0) + chr(charr) + chr(0)*5)
 		writeit(chr(0)*8)
 def writeittwo(report):
-    with open('hidg0', 'wb+') as fd:
+    with open('/dev/hidg0', 'rb+') as fd:
         fd.write(report)
 def yeeyee():
 	writeittwo(bytes([32, 0, 30, 0, 0, 0, 0, 0]))
