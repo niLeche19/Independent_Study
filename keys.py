@@ -1,6 +1,7 @@
+#this file contains the coded needed to send key reports
 
 def writeit(report):
-    with open('/dev/hidg0', 'wb+') as fd:
+    with open('/dev/hidg0', 'rb+') as fd:
         fd.write(report.encode())
 	
 def sendit(mod, charr):
