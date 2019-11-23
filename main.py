@@ -14,9 +14,9 @@ import keys
 iop.setmode(iop.BCM)
 NULL_CHAR = chr(0)
 
-pins = (27,2,3,4,17,22,10,9,11,5,6,13,26,21,20)
 pins = (2,3,4,17,27,22,10,9,11,20,5,6,13,19,26,21)
 tstpins = (2,27,11,13)
+
 keysdown = []
 
 for i in pins:
