@@ -38,4 +38,4 @@ def twelve():
 def thirteen():
 	sendit(0, 232)
 	
-functions = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thriteen]
+functions = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen]
