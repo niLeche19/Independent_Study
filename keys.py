@@ -1,3 +1,8 @@
+
+from main.py import senditmain
+def sendit(mod, char):
+	senditmain(mod, char)
+
 def one():
 	sendit(0, 30)
 	sendit(32, 30)
