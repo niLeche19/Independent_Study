@@ -22,11 +22,12 @@ for i in pins:
 	iop.setup(i, iop.IN, pull_up_down=iop.PUD_UP)
 print ("Pins are set up, starting now :)")
 
+"""
 def writeit(report):
     with open('/dev/hidg0', 'wb+') as fd:
         fd.write(report.encode())
 	
-def senditmain(mod, charr):
+def sendit(mod, charr):
 	if mod == 0:
 		writeit(chr(0)*2 + chr(charr) + chr(0)*5)
 		writeit(chr(0)*8)
@@ -35,7 +36,7 @@ def senditmain(mod, charr):
 		writeit(chr(0)*8)
 
 # define each set of strokes for each key hear:
-"""
+
 def one():
 	sendit(0, 30)
 	sendit(32, 30)
@@ -49,6 +50,7 @@ def thirteen():
 	
 functions = (one, five, nine, thirteen) # list of key functions
 """	
+
 def lstscn (l, n):
 	fls = 0
 	
