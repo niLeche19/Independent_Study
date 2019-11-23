@@ -49,7 +49,7 @@ def lstscn (l, n):
 
 try:
 	while True:		
-		for i in range(len(tstpins)):
+		for i in range(len(pins)):
 			newi = pins[i]
 			fals = 1
 			if iop.input(newi) == 0: #checks list for pressed keys
