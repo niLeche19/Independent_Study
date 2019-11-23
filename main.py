@@ -26,7 +26,7 @@ def writeit(report):
     with open('/dev/hidg0', 'wb+') as fd:
         fd.write(report.encode())
 	
-def sendit(mod, charr):
+def senditmain(mod, charr):
 	if mod == 0:
 		writeit(chr(0)*2 + chr(charr) + chr(0)*5)
 		writeit(chr(0)*8)
@@ -35,6 +35,7 @@ def sendit(mod, charr):
 		writeit(chr(0)*8)
 
 # define each set of strokes for each key hear:
+"""
 def one():
 	sendit(0, 30)
 	sendit(32, 30)
@@ -46,8 +47,8 @@ def nine():
 def thirteen():
 	sendit(0, 232)
 	
-#functions = (one, five, nine, thirteen) # list of key functions
-	
+functions = (one, five, nine, thirteen) # list of key functions
+"""	
 def lstscn (l, n):
 	fls = 0
 	
