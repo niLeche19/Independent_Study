@@ -21,11 +21,11 @@ def writeit(report):
 #send it
 def sendit(mod, char):
 	if mod == 0:
-		writeit(bytes([0, 0, char, 0, 0, 0, 0, 0])
-		writeit(bytes([0, 0, 0, 0, 0, 0, 0, 0])
+		writeit(bytes([0, 0, char, 0, 0, 0, 0, 0]))
+		writeit(bytes([0, 0, 0, 0, 0, 0, 0, 0]))
 	else:
-		writeit(bytes([mod, 0, char, 0, 0, 0, 0, 0])
-		writeit(bytes([0, 0, 0, 0, 0, 0, 0, 0])
+		writeit(bytes([mod, 0, char, 0, 0, 0, 0, 0]))
+		writeit(bytes([0, 0, 0, 0, 0, 0, 0, 0]))
 """
 def yeeyee():
 	writeittwo(bytes([32, 0, 30, 0, 0, 0, 0, 0]))
