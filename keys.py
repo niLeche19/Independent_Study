@@ -50,4 +50,13 @@ def twelve():
 def thirteen():
 	sendit(0, 232)
 	
+def fourteen():
+	sendit(32, 9)
+	
+def fifteen():
+	sendit(32, 9)
+	
+def sixteen():
+	sendit(32, 9)
+	
 functions = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen]
