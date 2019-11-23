@@ -1,8 +1,15 @@
 
-from main import senditmain
-def sendit(mod, char):
-	senditmain(mod, char)
-
+def writeit(report):
+    with open('/dev/hidg0', 'wb+') as fd:
+        fd.write(report.encode())
+	
+def sendit(mod, charr):
+	if mod == 0:
+		writeit(chr(0)*2 + chr(charr) + chr(0)*5)
+		writeit(chr(0)*8)
+	else:
+		writeit(chr(mod) + chr(0) + chr(charr) + chr(0)*5)
+		writeit(chr(0)*8)
 def one():
 	sendit(0, 30)
 	sendit(32, 30)
