@@ -1,5 +1,5 @@
 
-from main.py import senditmain
+from main import senditmain
 def sendit(mod, char):
 	senditmain(mod, char)
 
