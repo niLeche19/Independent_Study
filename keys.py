@@ -16,6 +16,7 @@ def writeittwo(report):
         fd.write(report)
 def yeeyee():
 	writeittwo(bytes([32, 0, 30, 0, 0, 0, 0, 0]))
+	writeittwo(bytes([0, 0, 232, 0, 0, 0, 0, 0]))
 	writeittwo(bytes([0, 0, 0, 0, 0, 0, 0, 0]))
 		
 def one():
