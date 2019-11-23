@@ -9,6 +9,7 @@ Project: Macro keyboard							#
 from time import sleep
 from os import system
 import RPi.GPIO as iop
+import keys
 
 iop.setmode(iop.BCM)
 NULL_CHAR = chr(0)
@@ -45,7 +46,7 @@ def nine():
 def thirteen():
 	sendit(0, 232)
 	
-functions = (one, five, nine, thirteen) # list of key functions
+#functions = (one, five, nine, thirteen) # list of key functions
 	
 def lstscn (l, n):
 	fls = 0
@@ -69,7 +70,7 @@ try:
 			if iop.input(newi) == 0: #checks list for pressed keys
 				#pressed = 1
 				if lstscn (keysdown, newi) == False:
-					functions[i]()
+					keys.functions[i]()
 					keysdown.append(newi)
 					
 			elif iop.input(newi)==1: #checks list for released keys
