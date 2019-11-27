@@ -1,4 +1,5 @@
 #this file contains the coded needed to send key reports
+import RPi.GPIO as iop
 
 def writeit(report):
     with open('/dev/hidg0', 'rb+') as fd:
@@ -6,16 +7,23 @@ def writeit(report):
 	
 
 #write it
+# IOP(12) is the OS set switch, posistion 1 is macos and posistion 0 is windows. It switches between ctrl and meta
 def writeit(report):
     with open('/dev/hidg0', 'rb+') as fd:
         fd.write(report)
+
 #send it
 def sendit(mod, char):
+	if mod == 16 and iop.input(12) == 1:
+		modOS = 8
+	if mod == 8 and iop.input(12) == 0:
+		modOS = 16
+
 	if mod == 0:
 		writeit(bytes([0, 0, char, 0, 0, 0, 0, 0]))
 		writeit(bytes([0, 0, 0, 0, 0, 0, 0, 0]))
 	else:
-		writeit(bytes([mod, 0, char, 0, 0, 0, 0, 0]))
+		writeit(bytes([modOS, 0, char, 0, 0, 0, 0, 0]))
 		writeit(bytes([0, 0, 0, 0, 0, 0, 0, 0]))
 
 def one():
