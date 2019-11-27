@@ -1,18 +1,9 @@
 #this file contains the coded needed to send key reports
-"""
+
 def writeit(report):
     with open('/dev/hidg0', 'rb+') as fd:
         fd.write(report.encode())
 	
-def sendit(mod, charr):
-	if mod == 0:
-		writeit(chr(0)*2 + chr(charr) + chr(0)*5)
-		writeit(chr(0)*8)
-	else:
-		writeit(chr(mod) + chr(0) + chr(charr) + chr(0)*5)
-		writeit(chr(0)*8)
-"""
-
 
 #write it
 def writeit(report):
@@ -26,14 +17,7 @@ def sendit(mod, char):
 	else:
 		writeit(bytes([mod, 0, char, 0, 0, 0, 0, 0]))
 		writeit(bytes([0, 0, 0, 0, 0, 0, 0, 0]))
-"""
-def yeeyee():
-	writeittwo(bytes([32, 0, 30, 0, 0, 0, 0, 0]))
-	writeittwo(bytes([0, 0, 232, 0, 0, 0, 0, 0]))
-	writeittwo(bytes([0, 0, 171, 0, 0, 0, 0, 0]))
-	writeittwo(bytes([0, 0, 179, 0, 0, 0, 0, 0]))
-	writeittwo(bytes([0, 0, 0, 0, 0, 0, 0, 0]))
-"""
+
 def one():
 	sendit(0, 30)
 	sendit(32, 30)
