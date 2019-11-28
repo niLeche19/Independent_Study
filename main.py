@@ -52,16 +52,17 @@ def lstscn (l, n):
 		return (True)	
 
 try:
-	while True:		
+	while True:
+		print(iop.input(12)
+		if iop.input(12) == 0: 
+			keys.OS = 0
+		elif iop.input(12) == 1:
+			keys.OS = 1
 		for i in range(len(pins)):
 			newi = pins[i]
 			fals = 1
 			# operating system selector
-			print(iop.input(12)
-			if iop.input(12) == 0: 
-				keys.OS = 0
-			elif iop.input(12) == 1:
-				keys.OS = 1
+			
 			
 			if iop.input(newi) == 0: #checks list for pressed keys
 				if lstscn (keysdown, newi) == False:
