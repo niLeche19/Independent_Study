@@ -18,8 +18,9 @@ def sendit(mod, char):
 	print(OS)
 	if mod == 16 and OS == 1:
 		modOS = 8
-	if mod == 8 and 0:
+	elif mod == 8 and 0:
 		modOS = 16
+	else modOS = mod
 
 	if mod == 0:
 		writeit(bytes([0, 0, char, 0, 0, 0, 0, 0]))
