@@ -11,7 +11,14 @@ OS = 2 # 0 in windows and 1 is OSX. It switches between ctrl and meta(win/cmd)
 def writeit(report):
     with open('/dev/hidg0', 'rb+') as fd:
         fd.write(report)
-	
+
+def keyexc(wlst):
+	for i in range(len(wlst)):
+		sendit(wlst[i][0], wlst[i][1])
+
+funcone = [[0, 30], [32, 30]]
+
+
 #send it
 def sendit(mod, char):
 	modOS = 16
@@ -30,8 +37,7 @@ def sendit(mod, char):
 		writeit(bytes([0, 0, 0, 0, 0, 0, 0, 0]))
 
 def one():
-	sendit(0, 30)
-	sendit(32, 30)
+	keyexc(funcone)
 	
 def two():
 	sendit(32, 9)
