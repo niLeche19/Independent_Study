@@ -22,6 +22,7 @@ keysdown = []
 for i in pins:
 	iop.setup(i, iop.IN, pull_up_down=iop.PUD_UP)
 
+iop.setup(12, iop.IN, pull_up_down=iop.PUD_UP) # 12 is setup seperatly for OS toggle switch
 
 print ("Pins are set up, starting now :)")
 
@@ -55,6 +56,13 @@ try:
 		for i in range(len(pins)):
 			newi = pins[i]
 			fals = 1
+			# operating system selector
+			print(iop.input(12)
+			if iop.input(12) == 0: 
+				keys.OS = 0
+			elif iop.input(12) == 1:
+				keys.OS = 1
+			
 			if iop.input(newi) == 0: #checks list for pressed keys
 				if lstscn (keysdown, newi) == False:
 					keys.functions[i]()
