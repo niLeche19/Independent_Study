@@ -22,7 +22,7 @@ keysdown = []
 for i in pins:
 	iop.setup(i, iop.IN, pull_up_down=iop.PUD_UP)
 
-iop.setup(14, iop.IN, pull_up_down=iop.PUD_UP) # 12 is setup seperatly for OS toggle switch
+iop.setup(15, iop.IN, pull_up_down=iop.PUD_UP) # 12 is setup seperatly for OS toggle switch
 
 print ("Pins are set up, starting now :)")
 
@@ -54,10 +54,10 @@ def lstscn (l, n):
 try:
 	while True:
 		sleep(0.05)
-		print(iop.input(14), keys.OS)
-		if iop.input(14) == 0: 
+		print(iop.input(15), keys.OS)
+		if iop.input(15) == 0: 
 			keys.OS = 0
-		elif iop.input(14) == 1:
+		elif iop.input(15) == 1:
 			keys.OS = 1
 		
 		for i in range(len(pins)):
