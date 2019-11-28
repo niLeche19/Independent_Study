@@ -45,9 +45,9 @@ ln -s functions/hid.usb0 configs/c.1
 # Enable gadget
 ls /sys/class/udc > UDC
 
-pins=(2 3 4 17 27 22 10 9 11 20 5 6 13 19 26 21 18)
+#pins=(2 3 4 17 27 22 10 9 11 20 5 6 13 19 26 21 18)
 
-for i in ${pins[@]}; do
-	echo "$i" > /sys/class/gpio/export
-	echo "in" > /sys/class/gpio/gpio$i/direction
-done
+#for i in ${pins[@]}; do
+#	echo "$i" > /sys/class/gpio/export
+#	echo "in" > /sys/class/gpio/gpio$i/direction
+#done
