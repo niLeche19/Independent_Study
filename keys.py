@@ -1,6 +1,6 @@
 #this file contains the coded needed to send key reports
 import RPi.GPIO as iop
-
+iop.setmode(iop.BCM)
 # 12 is setup seperatly for OS toggle switch
 iop.setup(12, iop.IN, pull_up_down=iop.PUD_UP)
 
