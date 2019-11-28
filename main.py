@@ -56,9 +56,9 @@ try:
 		sleep(0.05)
 		print(iop.input(18), keys.OS)
 		if iop.input(18) == 0: 
-			keys.OS = 0
-		elif iop.input(18) == 1:
 			keys.OS = 1
+		elif iop.input(18) == 1:
+			keys.OS = 0
 		
 		for i in range(len(pins)):
 			newi = pins[i]
