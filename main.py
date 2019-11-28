@@ -54,7 +54,7 @@ def lstscn (l, n):
 try:
 	while True:
 		sleep(0.05)
-		print(iop.input(21), keys.OS)
+		print(iop.input(9), keys.OS)
 		if iop.input(21) == 0: 
 			keys.OS = 0
 		elif iop.input(21) == 1:
