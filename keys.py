@@ -20,7 +20,7 @@ def sendit(mod, char):
 		modOS = 8
 	elif mod == 8 and 0:
 		modOS = 16
-	else modOS = mod
+	else: modOS = mod
 
 	if mod == 0:
 		writeit(bytes([0, 0, char, 0, 0, 0, 0, 0]))
