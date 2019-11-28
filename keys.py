@@ -81,4 +81,4 @@ def fifteen():
 def sixteen():
 	sendit(32, 9)
 	
-functions = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen]
+functions = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen]
