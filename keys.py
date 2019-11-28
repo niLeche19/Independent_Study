@@ -18,7 +18,7 @@ def writeit(report):
 	
 #send it
 def sendit(mod, char):
-	modOS = 0
+	modOS = 16
 	print(OS)
 	if mod == 16 and OS == 1:
 		modOS = 8
