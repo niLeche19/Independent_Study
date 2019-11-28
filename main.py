@@ -53,12 +53,13 @@ def lstscn (l, n):
 
 try:
 	while True:
+		sleep(0.05)
 		print(iop.input(12))
 		if iop.input(12) == 0: 
 			keys.OS = 0
 		elif iop.input(12) == 1:
 			keys.OS = 1
-			
+		
 		for i in range(len(pins)):
 			newi = pins[i]
 			fals = 1
