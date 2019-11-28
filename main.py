@@ -21,6 +21,10 @@ keysdown = []
 
 for i in pins:
 	iop.setup(i, iop.IN, pull_up_down=iop.PUD_UP)
+
+# 12 is setup seperatly for OS toggle switch
+iop.setup(12, iop.IN, pull_up_down=iop.PUD_UP)
+
 print ("Pins are set up, starting now :)")
 
 """
