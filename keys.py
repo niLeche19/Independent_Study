@@ -4,10 +4,9 @@ iop.setmode(iop.BCM)
 
 # 12 is setup seperatly for OS toggle switch
 iop.setup(12, iop.IN, pull_up_down=iop.PUD_UP)
-OS = 2 # 0 in windows and 1 is OSX. It switches between ctrl and meta(win/cmd)
+OS = 2 # 1 in windows and 0 is OSX. It switches between ctrl and meta(win/cmd)
 
 #write it
-# IOP(12) is the OS set switch, posistion 1 is macos and posistion 0 is windows. It switches between ctrl and meta
 def writeit(report):
     with open('/dev/hidg0', 'rb+') as fd:
         fd.write(report)
