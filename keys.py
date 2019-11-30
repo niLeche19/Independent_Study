@@ -37,10 +37,11 @@ def sendit(mod, char):
 
 funcone = [[4,0],[8,0],[0,21],[0,0]]
 def one():
-	sendit(4,0)
-	sendit(8,0)
-	sendit(0,21)
-	sendit(0,0)
+	writeit(bytes([4,8,21,0,0,0,0,0]))
+	#sendit(4,0)
+	#sendit(8,0)
+	#sendit(0,21)
+	#sendit(0,0)
 	#keyexc(funcone)
 
 functwo = [[0,0]]
