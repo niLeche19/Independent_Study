@@ -21,12 +21,13 @@ def keyexc(wlst):
 def sendit(mod, char):
 	modOS = 16
 	print(OS)
+	"""
 	if mod == 16 and OS == 1:
 		modOS = 8
 	elif mod == 8 and 0:
 		modOS = 16
 	else: modOS = mod
-
+	"""
 	if mod == 0:
 		writeit(bytes([0, 0, char, 0, 0, 0, 0, 0]))
 		writeit(bytes([0, 0, 0, 0, 0, 0, 0, 0]))
