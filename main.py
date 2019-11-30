@@ -64,8 +64,6 @@ try:
 			newi = pins[i]
 			fals = 1
 			# operating system selector
-			
-			
 			if iop.input(newi) == 0: #checks list for pressed keys
 				if lstscn (keysdown, newi) == False:
 					keys.functions[i]()
