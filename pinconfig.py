@@ -4,7 +4,7 @@ import RPi.GPIO as iop
 screen = 1
 
 def initiate():
-	forwardd = input(" Welcome to the key configurator. \n At any time you can press 'h' for help or 'b' to go back.\n")
+	forwardd = input(" Welcome to the key configurator. \n At any time you can press 'h' for help or 'b' to go back.\n ")
 	screen = 1
 	screenone()
 	
@@ -16,9 +16,10 @@ def screenone():
 	elif direc == 'q':
 		print(" Seeya later.")
 	elif direc == 'e':
-		whichh = input(" What key would you like to edit?")
+		whichh = input(" What key would you like to edit?\n ")
+		whichh = int(whichh)
 		if whichh > 16 or whichh < 1:
-			print(" Please enter a number (1-16)")
+			print(" Please enter a number (1-16)\n ")
 		else: screentwo(whichh)
 	else:
 		print(" Press 'h' for help.")
