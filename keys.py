@@ -35,7 +35,7 @@ def sendit(mod, char):
 		writeit(bytes([modOS, 0, char, 0, 0, 0, 0, 0]))
 		writeit(bytes([0, 0, 0, 0, 0, 0, 0, 0]))
 
-funcone = [[12,21][0,0]]
+funcone = [[12,21],[0,0]]
 def one():
 	#writeit(bytes([12,0,21,0,0,0,0,0]))
 	keyexc(funcone)
