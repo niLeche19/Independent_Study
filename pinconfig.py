@@ -1,7 +1,7 @@
 from time import sleep
 import RPi.GPIO as iop
 
-screen=1
+screen = 1
 
 def initiate():
 	forwardd = input(" Welcome to the key configurator. \n At any time you can press 'h' for help or 'b' to go back.")
