@@ -5,7 +5,7 @@ screen = 1
 
 def initiate():
 	forwardd = input(" Welcome to the key configurator. \n At any time you can press 'h' for help or 'b' to go back.")
-        screen = 1
+        screen=1
 	screenone()
 	
 def screenone():
