@@ -9,19 +9,19 @@ def initiate():
 	screenone()
 	
 def screenone():
-	direc = input("")
+	direc = input(" ")
 	if direc == 'h':
 		print(" h   : Help. \n q   : Quit.\n e   : Edit a key.")
 		screenone()
 	elif direc == 'q':
-		print("Seeya later.")
+		print(" Seeya later.")
 	elif direc == 'e':
-		whichh = input("What key would you like to edit?")
+		whichh = input(" What key would you like to edit?")
 		if whichh > 16 or whichh < 1:
-			print("Please enter a number (1-16)")
+			print(" Please enter a number (1-16)")
 		else: screentwo(whichh)
 	else:
-		print("Press 'h' for help.")
+		print(" Press 'h' for help.")
 		screenone()
 	
 def screentwo(key):
