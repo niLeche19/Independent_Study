@@ -30,14 +30,14 @@ def sendit(mod, char):
 	
 	if mod == 0:
 		writeit(bytes([0, 0, char, 0, 0, 0, 0, 0]))
-		#writeit(bytes([0, 0, 0, 0, 0, 0, 0, 0]))
+		writeit(bytes([0, 0, 0, 0, 0, 0, 0, 0]))
 	else:
 		writeit(bytes([modOS, 0, char, 0, 0, 0, 0, 0]))
-		#writeit(bytes([0, 0, 0, 0, 0, 0, 0, 0]))
+		writeit(bytes([0, 0, 0, 0, 0, 0, 0, 0]))
 
 funcone = [[4,0],[8,0],[0,21],[0,0]]
 def one():
-	writeit(bytes([4,8,21,0,0,0,0,0]))
+	writeit(bytes([12,0,21,0,0,0,0,0]))
 	#sendit(4,0)
 	#sendit(8,0)
 	#sendit(0,21)
