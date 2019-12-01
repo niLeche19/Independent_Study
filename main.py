@@ -1,4 +1,4 @@
-#this is the space to test new code
+
 """
 #########################################################################
 Author: Nick Lee							#
@@ -53,7 +53,7 @@ def lstscn (l, n):
 
 try:
 	while True:
-		sleep(0.05)
+		sleep(0.09)
 		#print(iop.input(18), keys.OS)
 		if iop.input(18) == 0: 
 			keys.OS = 1
