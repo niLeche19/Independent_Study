@@ -26,7 +26,8 @@ def screenone():
 		if whichh > 16 or whichh < 1:
 			print(" Please enter a number (1-16)\n ")
 		else: screentwo(whichh)
-	
+	elif direc == '':
+		screeone()
 	else:
 		print(" Press 'h' for help.")
 		screenone()
