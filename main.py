@@ -55,11 +55,11 @@ def lstscn (l, n):
 try:
 	while True:
 		sleep(0.09)
-		#print(iop.input(18), keys.OS)
+		"""
 		if iop.input(PIN) == 0:
 			while iop.input(PIN) == 0:
 				time.sleep(0.05)
-			
+		"""
 		if iop.input(18) == 0: 
 			keys.OS = 1
 		elif iop.input(18) == 1:
