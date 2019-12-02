@@ -59,6 +59,7 @@ try:
 		if iop.input(PIN) == 0:
 			while iop.input(PIN) == 0:
 				time.sleep(0.05)
+			pinconfig.initiate()
 		"""
 		if iop.input(18) == 0: 
 			keys.OS = 1
