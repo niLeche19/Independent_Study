@@ -62,7 +62,7 @@ def screentwo(key):
 		print("adding string to key")
 	
 	elif nextt == '':
-		sreentwo(key)
+		screentwo(key)
 
 	else:
 		print(" Press 'h' for help.")
