@@ -1,8 +1,7 @@
 # This is the pin configuration file
 from time import sleep
 import RPi.GPIO as iop
-import main, keys
-
+import keys
 def initiate():
 	forwardd = input(" Welcome to the key configurator. \n At any time you can press 'h' for help or 'b' to go back.\n ")
 	main.cansend = 0
@@ -16,7 +15,7 @@ def screenone():
 	
 	elif direc == 'q':
 		print(" Seeya later.")
-		main.cansend = 1
+		#main.cansend = 1
 
 	elif direc == 'b':
 		initiate()
@@ -42,7 +41,7 @@ def screentwo(key):
 	
 	if nextt == 'q':
 		print(" Seeya later.")
-		main.cansend = 1
+		#main.cansend = 1
 	
 	if nextt == 'b':
 		screenone()
