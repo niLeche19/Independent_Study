@@ -25,6 +25,7 @@ def screenone():
 		whichh = int(whichh)
 		if whichh > 16 or whichh < 1:
 			print(" Please enter a number (1-16)\n ")
+			screenone()
 		else: screentwo(whichh)
 
 	elif direc == '':
@@ -37,7 +38,7 @@ def screenone():
 def screentwo(key):
 	nextt = input(" ")
 	if nextt == 'h':
-		print(" h   : Help.\n q   : Quit.\n b   : Go back.\n c   : Clear the key.\n a   : Add a character to the key.\n m   : add a modifier to the key.\n d   : Add a key with a modifier.\n s   : Add string.\n ")
+		print(" h   : Help.\n q   : Quit.\n b   : Go back.\n c   : Clear the key.\n a   : Add a character to the key.\n m   : Add a modifier to the key.\n d   : Set key to a string.\n s   : Add string.\n ")
 	
 	if nextt == 'q':
 		print(" Seeya later.")
@@ -50,6 +51,7 @@ def screentwo(key):
 		if input("Are you sure? (y/n)") == 'y':
 			del keys.lists[key - 1][:]
 			keys.lists[key - 1] += 0, 0
+			screentwo(key)
 		else:
 			screentwo(key)
 	elif nextt == 'a':
