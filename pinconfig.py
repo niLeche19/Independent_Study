@@ -4,7 +4,7 @@ import RPi.GPIO as iop
 import keys
 def initiate():
 	forwardd = input(" Welcome to the key configurator. \n At any time you can press 'h' for help or 'b' to go back.\n ")
-	main.cansend = 0
+	#main.cansend = 0
 	screenone()
 	
 def screenone():
