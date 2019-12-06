@@ -5,11 +5,18 @@ with open('kc.txt', 'r') as f:
     rept = f.readlines()
     f.seek(0)
     for i in range(1):
+        ii = 0
         for j in rept[i]:
             if j == '-':
                 lst3.append([])
         for j in rept[i]:
-            
+            if h != '-' and h != ',':
+                lst1.append(i)
+            if h == ',':
+				lst3[ii] += lst1
+				del lst1[:]
+			if h == '-':
+				ii += 1
     print(lst3)
     f.seek(0)
     for i in range(1):
