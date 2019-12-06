@@ -9,8 +9,7 @@ with open('kc.txt', 'r') as f:
         for j in rept[i]:
             if j == '-':
                 lst3.append([])
-        for j in rept[i]:
-		
+        for h in rept[i]:
             	if h != '-' and h != ',':
                 	lst1.append(i)
             	if h == ',':
@@ -18,6 +17,7 @@ with open('kc.txt', 'r') as f:
 			del lst1[:]
 		if h == '-':
 			ii += 1
+			"""
     print(lst3)
     f.seek(0)
     for i in range(1):
@@ -39,7 +39,7 @@ with open('kc.txt', 'r') as f:
                 del lst1[:], lst2[:]
                 
                 
-            """
+            
             if j == '-':
                 lst3.insert(0, lst2)
                 del lst2[:], lst1[:]
@@ -50,8 +50,8 @@ with open('kc.txt', 'r') as f:
                 lst1.append(int(j))
             """
     
-    print (lst1)
-    print(lst2)
-    print(lst3)
+print(lst1)
+print(lst2)
+print(lst3)
 
 
