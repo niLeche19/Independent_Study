@@ -2,6 +2,8 @@
 from time import sleep
 import RPi.GPIO as iop
 import keys
+
+def 
 def initiate():
 	forwardd = input(" Welcome to the key configurator. \n At any time you can press 'h' for help or 'b' to go back.\n ")
 	#main.cansend = 0
@@ -56,6 +58,8 @@ def screentwo(key):
 			screentwo(key)
 	elif nextt == 'a':
 		print("adding character")
+		addchar = input("What character would you like to add?\n ")
+		
 	elif nextt == 'm':
 		print("adding modifier")
 	elif nextt == 'd':
