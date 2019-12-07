@@ -1,4 +1,5 @@
 #this file contains the coded needed to send key reports
+import funcread
 import RPi.GPIO as iop
 iop.setmode(iop.BCM)
 
@@ -35,6 +36,11 @@ def sendit(mod, char):
 		writeit(bytes([modOS, 0, char, 0, 0, 0, 0, 0]))
 		writeit(bytes([0, 0, 0, 0, 0, 0, 0, 0]))
 
+		
+def funkysendit(key):
+	funclist = funcread(key-1)
+	keyexec(funclist)
+"""
 funcone = [[12,21],[0,0]]
 def one():
 	#writeit(bytes([12,0,21,0,0,0,0,0]))
@@ -102,3 +108,6 @@ def sixteen():
 
 lists = [funcone, functwo, functhree, funcfour, funcfive, funcsix, funcseven, funceight, funcnine, functen, funceleven, functwelve, functhirteen, funcfourteen, funcfifteen, funcsixteen]
 functions = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen]
+"""
+
+
