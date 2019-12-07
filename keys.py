@@ -22,19 +22,20 @@ def keyexc(wlst):
 #send it
 def sendit(mod, char):
 	modOS = 16
-	print(OS)
 	
 	if mod == 16 and OS == 1:
 		modOS = 8
 	elif mod == 8 and OS == 0:
 		modOS = 16
 	else: modOS = mod
-	
+	print("Pased the mod section")
 	if mod == 0:
 		writeit(bytes([0, 0, char, 0, 0, 0, 0, 0]))
 		#writeit(bytes([0, 0, 0, 0, 0, 0, 0, 0]))
 	else:
+		print("into the mod send")
 		writeit(bytes([modOS, 0, char, 0, 0, 0, 0, 0]))
+		print("Out of the mod send")
 		#writeit(bytes([0, 0, 0, 0, 0, 0, 0, 0]))
 
 		
