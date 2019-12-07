@@ -38,7 +38,7 @@ def sendit(mod, char):
 
 		
 def funkysendit(key):
-	funclist = funcread(key-1)
+	funclist = funcread(key)
 	keyexec(funclist)
 """
 funcone = [[12,21],[0,0]]
