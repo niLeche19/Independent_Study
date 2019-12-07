@@ -27,20 +27,6 @@ iop.setup(18, iop.IN, pull_up_down=iop.PUD_UP) # 18 is setup seperatly for OS to
 #iop.setup(PIN, iop.IN, pull_up_down=iop.PUD_UP) # this is setup seperatly for pin config enter
 print ("Pins are set up, starting now :)")
 
-"""
-def writeit(report):
-    with open('/dev/hidg0', 'wb+') as fd:
-        fd.write(report.encode())
-	
-def sendit(mod, charr):
-	if mod == 0:
-		writeit(chr(0)*2 + chr(charr) + chr(0)*5)
-		writeit(chr(0)*8)
-	else:
-		writeit(chr(mod) + chr(0) + chr(charr) + chr(0)*5)
-		writeit(chr(0)*8)
-"""	
-
 def lstscn (l, n):
 	fls = 0
 	if l != []: #check for empty list
@@ -72,8 +58,8 @@ try:
 			# operating system selector
 			if iop.input(newi) == 0: #checks list for pressed keys
 				if lstscn (keysdown, newi) == False:
-					if cansend == 1:
-						keys.functions[i]()
+					if cansend == 1: # this is preventitave for if the config is open
+						keys.funkysendit(i-1)
 					keysdown.append(newi)
 					
 			elif iop.input(newi) == 1: #checks list for released keys
@@ -82,3 +68,6 @@ try:
 
 finally:
 	print ("Goodbye!")
+
+	
+	
