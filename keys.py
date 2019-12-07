@@ -30,8 +30,10 @@ def sendit(mod, char):
 	else: modOS = mod
 	print("Pased the mod section")
 	if mod == 0:
+		print("Into the unmod section")
 		writeit(bytes([0, 0, char, 0, 0, 0, 0, 0]))
 		#writeit(bytes([0, 0, 0, 0, 0, 0, 0, 0]))
+		print("Out of the unmod section")
 	else:
 		print("into the mod send")
 		writeit(bytes([modOS, 0, char, 0, 0, 0, 0, 0]))
@@ -41,7 +43,6 @@ def sendit(mod, char):
 		
 def funkysendit(key):
 	funclist = funcread.readit(key)
-	print(funclist, len(funclist))
 	keyexc(funclist)
 """
 funcone = [[12,21],[0,0]]
