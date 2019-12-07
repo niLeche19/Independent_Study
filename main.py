@@ -59,7 +59,7 @@ try:
 			if iop.input(newi) == 0: #checks list for pressed keys
 				if lstscn (keysdown, newi) == False:
 					if cansend == 1: # this is preventitave for if the config is open
-						keys.funkysendit(i-1)
+						keys.funkysendit(i)
 					keysdown.append(newi)
 					
 			elif iop.input(newi) == 1: #checks list for released keys
