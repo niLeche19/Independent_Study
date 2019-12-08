@@ -40,11 +40,11 @@ def sendit(mod, char):
 		print("Out of the mod send")
 		#writeit(bytes([0, 0, 0, 0, 0, 0, 0, 0]))
 
-		
+"""
 def funkysendit(key):
 	funclist = funcread.readit(key)
 	keyexc(funclist)
-"""
+
 funcone = [[12,21],[0,0]]
 def one():
 	#writeit(bytes([12,0,21,0,0,0,0,0]))
