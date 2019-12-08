@@ -2,6 +2,19 @@
 This repo contains the file that were used to create the Macro keyboard for my independent study project
 
 ### to do:
-read keypresses and return list
+write to config file
 
-make one of the buttons play/pause music
+### wpa_supplicant contents:
+country=US
+update_config=1
+ctrl_interface=/var/run/wpa_supplicant
+
+network={
+ ssid="linksys"
+ key_mgmt=NONE
+}
+
+network={
+  ssid="Nick's OnePlus"
+  psk="********"
+ }
