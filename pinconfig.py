@@ -3,6 +3,10 @@ from time import sleep
 import RPi.GPIO as iop
 import keys
 
+lines = []
+with open('kc/txt', 'r') as lip:
+	lines = lip.readlines()
+
 def initiate():
 	forwardd = input(" Welcome to the key configurator. \n At any time you can press 'h' for help or 'b' to go back.\n ")
 	#main.cansend = 0
@@ -22,11 +26,16 @@ def screenone():
 		initiate()
 		
 	elif direc == 'e':
-		whichh = input(" What key would you like to edit?\n ")
-		whichh = int(whichh)
+		try:
+			whichh = int(input(" What key would you like to edit?\n "))
+		except:
+			print(" Please enter a number (1-16)\n ")
+			screenone()
+		
 		if whichh > 16 or whichh < 1:
 			print(" Please enter a number (1-16)\n ")
 			screenone()
+		
 		else: screentwo(whichh)
 
 	elif direc == '':
@@ -35,7 +44,7 @@ def screenone():
 	else:
 		print(" Press 'h' for help.")
 		screenone()
-	
+
 def screentwo(key):
 	nextt = input(" ")
 	if nextt == 'h':
@@ -49,16 +58,18 @@ def screentwo(key):
 		screenone()
 	
 	elif nextt == 'c':
-		if input("Are you sure? (y/n)") == 'y':
-			del keys.lists[key - 1][:]
-			keys.lists[key - 1] += 0, 0
-			screentwo(key)
+		if input(" Are you sure? (y/n)\n ") == 'y':
+			del lines[key - 1]
+			lines.insert((key - 1), '0,0-\n')
 		else:
 			screentwo(key)
+
 	elif nextt == 'a':
 		print("adding character")
 		addchar = input("What character would you like to add?\n ")
-		
+		templst = funcread(key)
+		templst.insert(len(templst) - 1, [0,ord(addchar)])
+
 	elif nextt == 'm':
 		print("adding modifier")
 	elif nextt == 'd':
