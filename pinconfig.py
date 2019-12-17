@@ -90,7 +90,7 @@ def screentwo(key):
 				screentwo(key)
 		else:
 			
-		print("adding modifier")
+			print("adding modifier")
 	elif nextt == 'd':
 		print("adding mod+key")
 	elif nextt == 's':
