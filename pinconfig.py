@@ -62,7 +62,7 @@ def screentwo(key):
 	elif nextt == 'c':
 		if input(" Are you sure? (y/n)\n ") == 'y':
 			#tmplst = funcread.readit(key)
-			funcwrite.writeit(key, [[1,1]])
+			funcwrite.writeit(key, [[0,0]])
 			print(tmplst, key)
 			#del lines[key - 1]
 			#lines.insert((key - 1), '0,0-\n')
