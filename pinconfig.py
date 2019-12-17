@@ -84,6 +84,7 @@ def screentwo(key):
 		if len(tmplst) > 2:
 			amm = input(" Which key would you like the modifier to add too?\n ")
 			try:
+				print(int('a'))
 				#tmplst[i-1][0] += #modifier number
 			except:
 				screentwo(key)
