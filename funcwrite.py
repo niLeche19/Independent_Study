@@ -8,8 +8,8 @@ def writeit(line, content):
 	for i in content:
 		convert += ("{},{}-\n".format(i[0], i[1]))
 	
-	del lines[line - 1]
-	lines.insert(line - 1, convert)
+	del lines[line]
+	lines.insert(line, convert)
 
 	with open('kc.txt', 'w') as ww:
 		ww.writelines(lines)
