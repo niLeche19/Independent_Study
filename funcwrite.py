@@ -1,7 +1,7 @@
 
-convert = ""
 
-def writeit(line, content):
+def writeit(line, content):	
+	convert = ""
 	with open('kc.txt', 'r') as rr:
 		lines = rr.readlines()
 
