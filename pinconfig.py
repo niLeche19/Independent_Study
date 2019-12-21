@@ -25,7 +25,7 @@ def screenone():
 	elif direc == 'e':
 		whichh = 0
 		try:
-			whichh = int(input(" Which key would you like to edit?\n "))
+			whichh = int(input(" Which key would you like to edit? (1-16)\n "))
 		except:
 			print(" Please enter a number (1-16)\n ")
 			screenone()
@@ -108,20 +108,14 @@ def screentwo(key):
 ##########
 	elif nextt == 'd':
 		if len(tmplst) != 1:
-			if len(tmplst) > 2:
-				try:
-					whichh = int(input(" Which instance would you like to delete?\n "))
-				except:
+			try:
+				whichh = int(input(" Which instance would you like to delete? (1-{})\n ".format(len(tmplst) - 1)))
+				if whichh > 1 or whichh < len(tmplst) - 1:
 					print(" Please input a number 1 - {}\n".format(len(tmplst) - 1))
 					screentwo(key)
-			else:
-				whichh = 1
-
-			if whichh < len(tmplst) - 1:
-				del tmplst[whichh - 1]
-			else:
-				print(" Please input a number 1 - {}\n ".format(len(tmplst) - 1))
-				screentwo(key)
+				else:
+					del tmplst[whichh - 1]
+					funcwrite.writeit(key, tmplst)
 		else:
 			print("	There are no instances to delete in this key.\n ")
 			screentwo(key)
@@ -139,6 +133,7 @@ def screentwo(key):
 			ac = input(" Which character would you like to add?\n ")
 			am = input(" Which modifier would you like to add?\n ")
 			tmplst.insert(0,[int(combos[am]), int(combos[ac])])
+			funcwrite.writeit(key, tmplst)
 		except:
 			print(" Please input a valid character/modifier, see documentation for list of valid chars/mods.\n ")
 			screentwo(key)
