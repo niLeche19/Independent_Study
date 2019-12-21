@@ -125,7 +125,7 @@ def screentwo(key):
 			screentwo(key)
 ##########
 	elif nextt == 'mc':
-		if len(tmplst0 > 1:
+		if len(tmplst) > 1:
 			try:
 				wheree = int(imput(" Where would like to add the new key instance?\n "))
 			except:
