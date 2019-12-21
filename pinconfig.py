@@ -51,6 +51,7 @@ def screentwo(key):
 ##########
 	if nextt == 'h':
 		print(" h   : Help.\n q   : Quit.\n b   : Go back.\n c   : Clear the key.\n a   : Add a character to the key.\n m   : Add a modifier to the key.\n d   : Delete a key.\n mc  : Add a modified key. \n s   : Add string.\n ")
+		screentwo(key)
 ##########
 	elif nextt == 'q':
 		print(" Seeya later.")
