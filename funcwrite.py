@@ -9,7 +9,7 @@ def writeit(line, content):
 		convert += ("{},{}-".format(i[0], i[1]))
 	
 	del lines[line]
-	lines.insert(line, (convert + "\n")
+	lines.insert(line, (convert + "\n"))
 
 	with open('kc.txt', 'w') as ww:
 		ww.writelines(lines)
