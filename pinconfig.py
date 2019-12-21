@@ -96,6 +96,11 @@ def screentwo(key):
 				screentwo(key)
 		else:
 			wheree = 1
+			
+		am = input(" Which modifier would you like to add?\n ")
+		print(am, type(am), combos[am], type(combos[am]), type(int(combos[am])))
+		tmplst[where - 1][0] += int(combos[am])
+		"""
 		try:
 			am = input(" Which modifier would you like to add?\n ")
 			print(am, type(am), combos[am], type(combos[am]), type(int(combos[am])))
@@ -103,6 +108,7 @@ def screentwo(key):
 		except:
 			print(" Please input a valid modifier, see documentation for list of accepted mods.\n ")
 			screentwo(key)
+		"""
 ##########
 	elif nextt == 'd':
 		if len(tmplst) != 1:
