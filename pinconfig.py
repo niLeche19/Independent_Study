@@ -62,7 +62,6 @@ def screentwo(key):
 	elif nextt == 'c':
 		if input(" Are you sure? (y/n)\n ") == 'y':
 			funcwrite.writeit(key, [[0,0]])
-			print(tmplst, key)
 		else:
 			screentwo(key)
 ##########
@@ -81,7 +80,7 @@ def screentwo(key):
 			ac = input(" What character would you like to add?\n ")
 			tmplst.insert(wheree - 1, [0,int(combos[ac])])
 			funcwrite.writeit(key, tmplst)
-			#print(combos[ac])
+			screentwo(key)
 		except:
 			print(" Please input an alphanumerical.\n")
 			screentwo(key)
@@ -99,8 +98,9 @@ def screentwo(key):
 			
 		try:
 			am = input(" Which modifier would you like to add?\n ")
-			print(am, type(am), combos[am], type(combos[am]), type(int(combos[am])))
 			tmplst[wheree - 1][0] += int(combos[am])
+			funcwrite.writeit(key, tmplst)
+			screentwo(key)
 		except:
 			print(" Please input a valid modifier, see documentation for list of accepted mods.\n ")
 			screentwo(key)
