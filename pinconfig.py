@@ -116,6 +116,9 @@ def screentwo(key):
 				else:
 					del tmplst[whichh - 1]
 					funcwrite.writeit(key, tmplst)
+			except:
+				print(" Lol something is wrong but i couldnt tell you what... \n ")
+				screentwo(key)
 		else:
 			print("	There are no instances to delete in this key.\n ")
 			screentwo(key)
