@@ -69,7 +69,7 @@ def screentwo(key):
 ##########
 	elif nextt == 'a':
 		#ac = input(" What character would you like to add?\n ")
-		if len(tmplst > 1):
+		if len(tmplst) > 1:
 			try:
 				wheree = int(imput(" Where would like to add the new key instance?\n "))
 			except:
@@ -125,7 +125,7 @@ def screentwo(key):
 			screentwo(key)
 ##########
 	elif nextt == 'mc':
-		if len(tmplst > 1):
+		if len(tmplst0 > 1:
 			try:
 				wheree = int(imput(" Where would like to add the new key instance?\n "))
 			except:
