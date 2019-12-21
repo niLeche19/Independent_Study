@@ -6,10 +6,10 @@ def writeit(line, content):
 		lines = rr.readlines()
 
 	for i in content:
-		convert += ("{},{}-\n".format(i[0], i[1]))
+		convert += ("{},{}-".format(i[0], i[1]))
 	
 	del lines[line]
-	lines.insert(line, convert)
+	lines.insert(line, (convert + "\n")
 
 	with open('kc.txt', 'w') as ww:
 		ww.writelines(lines)
