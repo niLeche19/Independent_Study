@@ -16,7 +16,7 @@ def writeit(report):
 
 #executes the list of keystrokes
 def keyexc(wlst):
-	print(len(wlst))
+	#print(len(wlst))
 	for i in range(len(wlst)):
 		sendit(wlst[i][0], wlst[i][1])
 
@@ -36,6 +36,6 @@ def sendit(mod, char):
 
 def funkysendit(key):
 	funclist = funcread.readit(key)
-	print(funclist)
+	#print(funclist)
 	keyexc(funclist)
 
