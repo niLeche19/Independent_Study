@@ -155,6 +155,7 @@ def screentwo(key):
 				strr = input(" Please enter your string.\n ")
 				for i in strr:
 					tmplst.insert(len(tmplst) - 1, [0,combos[i]])
+				funcwrite.writeit(key, tmplst)
 			except:
 				print(" Please input a valid string.\n ")
 			
