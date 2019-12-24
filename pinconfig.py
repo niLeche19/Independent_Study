@@ -2,7 +2,8 @@
 from time import sleep
 import RPi.GPIO as iop
 import keys, funcread, funcwrite
-combos = {'a': '4', 'b': '5', 'c': '6', 'd': '7', 'e': '8', 'f': '9', 'g': '10', 'h': '11', 'i': '12', 'j': '13', 'k': '14', 'l': '15', 'm': '16', 'n': '17', 'o': '18', 'p': '19', 'q': '20', 'r': '21', 's': '22', 't': '23', 'u': '24', 'v': '25', 'w': '26', 'x': '27', 'y': '28', 'z': '29', 'one': '30', 'two': '31', 'three': '32', 'four': '33', 'five': '34', 'six': '35', 'seven': '36', 'eight': '37', 'nine': '38', 'zero': '39', 'enter': '40', 'escape': '41', 'backspace': '42', 'tab': '43', 'spacebar': '44', 'minus': '45', 'equals': '46', 'left_bracket': '47', 'right_bracket': '48', 'backslash': '49', 'pound': '50', 'semicolon': '51', 'quote': '52', 'grave_accent': '53', 'comma': '54', 'period': '55', 'forward_slash': '56', 'caps_lock': '57', 'f1': '58', 'f2': '59', 'f3': '60', 'f4': '61', 'f5': '62', 'f6': '63', 'f7': '64', 'f8': '65', 'f9': '66', 'f10': '67', 'f11': '68', 'f12': '69', 'print_screen': '70', 'scroll_lock': '71', 'pause': '72', 'insert': '73', 'home': '74', 'page_up': '75', 'delete': '76', 'end': '77', 'page_down': '78', 'right_arrow': '79', 'left_arrow': '80', 'down_arrow': '81', 'up_arrow': '82', 'keypad_numlock': '83', 'keypad_forward_slash': '84', 'keypad_asterisk': '85', 'keypad_minus': '86', 'keypad_plus': '87', 'keypad_enter': '88', 'keypad_one': '89', 'keypad_two': '90', 'keypad_three': '91', 'keypad_four': '92', 'keypad_five': '93', 'keypad_six': '94', 'keypad_seven': '95', 'keypad_eight': '96', 'keypad_nine': '97', 'keypad_zero': '98', 'keypad_period': '99', 'keypad_backslash': '100', 'application': '101', 'power': '102', 'keypad_equals': '103', 'f13': '104', 'f14': '105', 'f15': '106', 'f16': '107', 'f17': '108', 'f18': '109', 'f19': '110', 'shift': '02', 'alt': '04', 'control': '01', 'windows': '08', 'command': '08', 'right_control': '16', 'right_shift': '32', 'right_alt': '64', 'right_gui': '128'}
+combos = {'a': '4', 'b': '5', 'c': '6', 'd': '7', 'e': '8', 'f': '9', 'g': '10', 'h': '11', 'i': '12', 'j': '13', 'k': '14', 'l': '15', 'm': '16', 'n': '17', 'o': '18', 'p': '19', 'q': '20', 'r': '21', 's': '22', 't': '23', 'u': '24', 'v': '25', 'w': '26', 'x': '27', 'y': '28', 'z': '29', '1': '30', '2': '31', '3': '32', '4': '33', '5': '34', '6': '35', '7': '36', '8': '37', '9': '38', '0': '39', 'enter': '40', 'escape': '41', 'back
+	  ': '42', 'tab': '43', ' ': '44', 'minus': '45', 'equals': '46', 'left_bracket': '47', 'right_bracket': '48', 'backslash': '49', 'pound': '50', 'semicolon': '51', 'quote': '52', 'grave_accent': '53', 'comma': '54', 'period': '55', 'forward_slash': '56', 'caps_lock': '57', 'f1': '58', 'f2': '59', 'f3': '60', 'f4': '61', 'f5': '62', 'f6': '63', 'f7': '64', 'f8': '65', 'f9': '66', 'f10': '67', 'f11': '68', 'f12': '69', 'print_screen': '70', 'scroll_lock': '71', 'pause': '72', 'insert': '73', 'home': '74', 'page_up': '75', 'delete': '76', 'end': '77', 'page_down': '78', 'right_arrow': '79', 'left_arrow': '80', 'down_arrow': '81', 'up_arrow': '82', 'keypad_numlock': '83', 'keypad_forward_slash': '84', 'keypad_asterisk': '85', 'keypad_minus': '86', 'keypad_plus': '87', 'keypad_enter': '88', 'keypad_one': '89', 'keypad_two': '90', 'keypad_three': '91', 'keypad_four': '92', 'keypad_five': '93', 'keypad_six': '94', 'keypad_seven': '95', 'keypad_eight': '96', 'keypad_nine': '97', 'keypad_zero': '98', 'keypad_period': '99', 'keypad_backslash': '100', 'application': '101', 'power': '102', 'keypad_equals': '103', 'f13': '104', 'f14': '105', 'f15': '106', 'f16': '107', 'f17': '108', 'f18': '109', 'f19': '110', 'shift': '02', 'alt': '04', 'control': '01', 'windows': '08', 'command': '08', 'right_control': '16', 'right_shift': '32', 'right_alt': '64', 'right_gui': '128'}
 
 def initiate():
 	forwardd = input(" Welcome to the key configurator. \n At any time you can press 'h' for help or 'b' to go back.\n Press enter.\n ")
@@ -50,7 +51,7 @@ def screentwo(key):
 	print(" Key contents: {}\n".format(tmplst[:len(tmplst) - 1]))
 ##########
 	if nextt == 'h':
-		print(" h   : Help.\n q   : Quit.\n b   : Go back.\n c   : Clear the key.\n a   : Add a character to the key.\n m   : Add a modifier to the key.\n d   : Delete a key.\n mc  : Add a modified key. \n s   : Add string.\n ")
+		print(" h   : Help.\n q   : Quit.\n b   : Go back.\n c   : Clear the key.\n a   : Add a character to the key.\n m   : Add a modifier to the key.\n d   : Delete a key.\n mc  : Add a modified key. \n s   : Add a string to the key.\n ")
 		screentwo(key)
 ##########
 	elif nextt == 'q':
@@ -63,6 +64,7 @@ def screentwo(key):
 	elif nextt == 'c':
 		if input(" Are you sure? (y/n)\n ") == 'y':
 			funcwrite.writeit(key, [[0,0]])
+			screentwo(key)
 		else:
 			screentwo(key)
 ##########
@@ -107,7 +109,7 @@ def screentwo(key):
 		
 ##########
 	elif nextt == 'd':
-		if len(tmplst) != 1:
+		if len(tmplst) > 1:
 			try:
 				whichh = int(input(" Which instance would you like to delete? (1-{})\n ".format(len(tmplst) - 1)))
 				if whichh < 1 or whichh > len(tmplst) - 1:
@@ -121,7 +123,7 @@ def screentwo(key):
 				print(" Lol something is wrong but i couldnt tell you what... \n ")
 				screentwo(key)
 		else:
-			print("	There are no instances to delete in this key.\n ")
+			print(" There are no instances to delete in this key.\n ")
 			screentwo(key)
 ##########
 	elif nextt == 'mc':
@@ -156,7 +158,8 @@ def screentwo(key):
 			funcwrite.writeit(key, tmplst)
 			screentwo(key)
 		except:
-			print(" Please input a valid string.\n ")
+			print(" The string can only contain lower case alphanumericals.\n Modifers can be added later.\n ")
+			screentwo(key)
 			
 
 ##########
