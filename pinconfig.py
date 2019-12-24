@@ -47,7 +47,7 @@ def screentwo(key):
 	print(" Editting key {}. Press h for help.\n ".format(key + 1))
 	nextt = input(" ")
 	tmplst = funcread.readit(key)
-	print(" Key contents: {}\n".format(tmplst[:len(tmplst)]))
+	print(" Key contents: {}\n".format(tmplst[:len(tmplst) - 1]))
 ##########
 	if nextt == 'h':
 		print(" h   : Help.\n q   : Quit.\n b   : Go back.\n c   : Clear the key.\n a   : Add a character to the key.\n m   : Add a modifier to the key.\n d   : Delete a key.\n mc  : Add a modified key. \n s   : Add string.\n ")
@@ -67,7 +67,6 @@ def screentwo(key):
 			screentwo(key)
 ##########
 	elif nextt == 'a':
-		#ac = input(" What character would you like to add?\n ")
 		if len(tmplst) > 1:
 			try:
 				wheree = int(imput(" Where would like to add the new key instance?\n "))
