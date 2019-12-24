@@ -110,7 +110,7 @@ def screentwo(key):
 		if len(tmplst) != 1:
 			try:
 				whichh = int(input(" Which instance would you like to delete? (1-{})\n ".format(len(tmplst) - 1)))
-				if whichh > 1 or whichh < len(tmplst) - 1:
+				if whichh < 1 or whichh > len(tmplst) - 1:
 					print(" Please input a number 1 - {}\n".format(len(tmplst) - 1))
 					screentwo(key)
 				else:
@@ -137,26 +137,25 @@ def screentwo(key):
 			am = input(" Which modifier would you like to add?\n ")
 			tmplst.insert(0,[int(combos[am]), int(combos[ac])])
 			funcwrite.writeit(key, tmplst)
+			screentwo(key)
 		except:
 			print(" Please input a valid character/modifier, see documentation for list of valid chars/mods.\n ")
 			screentwo(key)
 ##########
 	elif nextt == 's':
 		if len(tmplst) > 1:
-			dell = input(" Would you like to clear the key? (y/n)\n ")
-			if dell == 'y':
-				del tmplst[:]
-				tmplst.append([0,0])
-			else:
-				wheree = input(" Where would you like to add the string?\n ")
+			wheree = input(" Where wpuld you like to add the string?\n ")
 		else:
-			try:
-				strr = input(" Please enter your string.\n ")
-				for i in strr:
-					tmplst.insert(len(tmplst) - 1, [0,combos[i]])
-				funcwrite.writeit(key, tmplst)
-			except:
-				print(" Please input a valid string.\n ")
+			wheree = 1
+		
+		try:
+			strr = input(" Please enter your string.\n ")
+			for i in strr:
+				tmplst.insert(len(tmplst) - 1, [0,combos[i]])
+			funcwrite.writeit(key, tmplst)
+			screentwo(key)
+		except:
+			print(" Please input a valid string.\n ")
 			
 
 ##########
