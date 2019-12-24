@@ -111,7 +111,7 @@ def screentwo(key):
 			try:
 				whichh = int(input(" Which instance would you like to delete? (1-{})\n ".format(len(tmplst) - 1)))
 				if whichh > 1 or whichh < len(tmplst) - 1:
-					print(" Please input a number 1 - {}\n".format(len(tmplst)))
+					print(" Please input a number 1 - {}\n".format(len(tmplst) - 1))
 					screentwo(key)
 				else:
 					del tmplst[whichh - 1]
