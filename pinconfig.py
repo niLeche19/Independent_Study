@@ -91,7 +91,7 @@ def screentwo(key):
 			try:
 				wheree = int(input(" Which instance would you like to add the modifier to?\n "))
 			except:
-				print(" Please input a number 1 - {}\n".format(len(tmplst) - 1))
+				print(" Please input a number 1 - {}\n".format(len(tmplst)))
 				screentwo(key)
 		else:
 			wheree = 1
@@ -111,7 +111,7 @@ def screentwo(key):
 			try:
 				whichh = int(input(" Which instance would you like to delete? (1-{})\n ".format(len(tmplst) - 1)))
 				if whichh > 1 or whichh < len(tmplst) - 1:
-					print(" Please input a number 1 - {}\n".format(len(tmplst) - 1))
+					print(" Please input a number 1 - {}\n".format(len(tmplst)))
 					screentwo(key)
 				else:
 					del tmplst[whichh - 1]
@@ -128,7 +128,7 @@ def screentwo(key):
 			try:
 				wheree = int(imput(" Where would like to add the new key instance?\n "))
 			except:
-				print(" Please input a number 1 - {}\n".format(len(tmplst) - 1))
+				print(" Please input a number 1 - {}\n".format(len(tmplst) ))
 				screentwo(key)
 		else:
 			wheree = 1
