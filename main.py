@@ -23,7 +23,7 @@ for i in pins:
 #iop.setup(23, iop.IN, pull_up_down=iop.PUD_UP) # 23 is going to intiate the pin config script
 iop.setup(18, iop.IN, pull_up_down=iop.PUD_UP) # 18 is setup seperatly for OS toggle switch
 #iop.setup(PIN, iop.IN, pull_up_down=iop.PUD_UP) # this is setup seperatly for pin config enter
-print ("Pins are set up, starting now :)")
+#print ("Pins are set up, starting now :)")
 
 def lstscn (l, n):
 	fls = 0
