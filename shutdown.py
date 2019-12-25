@@ -11,6 +11,7 @@ cansend = 1
 
 while True:
 	if iop.input(23) == 0 and cansend == 1:
+		print("This works")
 		while iop.input(23) == 0:
 			time.sleep(0.02)
 			#cansend = 0
