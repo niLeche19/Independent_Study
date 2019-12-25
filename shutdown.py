@@ -1,7 +1,6 @@
 import RPi.GPIO as iop
 from time import sleep
 from os import system
-import pinconfig
 
 iop.setmode(iop.BCM)
 iop.setup(16, iop.IN, pull_up_down=iop.PUD_UP)
