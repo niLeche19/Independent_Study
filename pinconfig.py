@@ -46,7 +46,7 @@ def screenone():
 			screenone()
 		else: 
 			print(" {}\n ".format(funcread.readit(whichh - 1)))
-			screentwo(key)
+			screenone()
 
 	elif direc == '':
 		screenone()
