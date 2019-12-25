@@ -178,4 +178,6 @@ def screentwo(key):
 	else:
 		print(" Press 'h' for help.")
 		screentwo(key)		
+
 		
+initiate()
