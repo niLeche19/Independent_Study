@@ -14,7 +14,7 @@ while True:
 		while iop.input(23) == 0:
 			time.sleep(0.02)
 			#cansend = 0
-		pinconfig.initiate()
+		system('sudo python3 /home/pi/Independent_Study/pinconfig.py')
 	
 	if iop.input(16) == 0:
 		sleep(0.3)
