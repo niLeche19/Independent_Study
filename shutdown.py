@@ -21,6 +21,6 @@ while True:
 		sleep(0.3)
 		if iop.input(16) == 0:
 			print("Shutting down :)")
-			system('sudo python3 /home/pi/Independent_Study/pinconfig.py')
+			system('sudo python3')
 			#system('sudo shutdown now')
 iop.cleanup
