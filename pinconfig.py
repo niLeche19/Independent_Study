@@ -35,6 +35,16 @@ def screenone():
 			screenone()
 		
 		else: screentwo(whichh - 1)
+	elif direc == 'p':
+		try:
+			whichh = int(input(" Which key would you like to print? (1 - 16)\n "))
+		except:
+			print(" Please input a number (1 - 16)\n ")
+			screenone()
+		if whichh > 16 or whichh < 1:
+			print(" Please enter a number (1-16)\n ")
+			screenone()
+		else: print(funcread.readit(whichh - 1))
 
 	elif direc == '':
 		screenone()
@@ -90,7 +100,7 @@ def screentwo(key):
 		#am = input(" Which modifier would you like to add?\n ")
 		if len(tmplst) > 2:
 			try:
-				wheree = int(input(" Which instance would you like to add the modifier to?\n "))
+				wheree = int(input(" Which instance would you like to add the modifier to? (1 - {}).\n ".format(len(tmplst))))
 			except:
 				print(" Please input a number 1 - {}\n".format(len(tmplst)))
 				screentwo(key)
