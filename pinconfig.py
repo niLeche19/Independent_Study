@@ -45,7 +45,7 @@ def screenone():
 			print(" Please enter a number (1-16)\n ")
 			screenone()
 		else: 
-			print(' ' + funcread.readit(whichh - 1))
+			print(" {}\n ".format(funcread.readit(whichh - 1)))
 			screentwo(key)
 
 	elif direc == '':
