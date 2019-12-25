@@ -44,7 +44,9 @@ def screenone():
 		if whichh > 16 or whichh < 1:
 			print(" Please enter a number (1-16)\n ")
 			screenone()
-		else: print(funcread.readit(whichh - 1))
+		else: 
+			print(' ' + funcread.readit(whichh - 1))
+			screentwo(key)
 
 	elif direc == '':
 		screenone()
