@@ -9,20 +9,18 @@ Project: Macro keyboard							#
 from time import sleep
 from os import system
 import RPi.GPIO as iop
-import keys, pinconfig
+import keys#, pinconfig
 
 iop.setmode(iop.BCM)
-NULL_CHAR = chr(0)
 
 pins = (2,3,4,17,27,22,10,9,11,20,5,6,13,19,26,21)
-tstpins = (2,27,11,13)
 
 keysdown = []
 cansend = 1
 
 for i in pins:
 	iop.setup(i, iop.IN, pull_up_down=iop.PUD_UP)
-
+#iop.setup(23, iop.IN, pull_up_down=iop.PUD_UP) # 23 is going to intiate the pin config script
 iop.setup(18, iop.IN, pull_up_down=iop.PUD_UP) # 18 is setup seperatly for OS toggle switch
 #iop.setup(PIN, iop.IN, pull_up_down=iop.PUD_UP) # this is setup seperatly for pin config enter
 print ("Pins are set up, starting now :)")
@@ -42,9 +40,9 @@ try:
 	while True:
 		sleep(0.09)
 		"""
-		if iop.input(PIN) == 0:
-			while iop.input(PIN) == 0:
-				time.sleep(0.05)
+		if iop.input(23) == 0:
+			while iop.input(23) == 0:
+				time.sleep(0.02)
 			pinconfig.initiate()
 		"""
 		if iop.input(18) == 0: 
