@@ -22,8 +22,8 @@ for i in pins:
 	iop.setup(i, iop.IN, pull_up_down=iop.PUD_UP)
 
 # pull_up_down=iop.PUD_UP
-#iop.setup(23, iop.IN) # 23 is going to intiate the pin config script
-#iop.setup(18, iop.IN) # 18 is setup seperatly for OS toggle switch
+iop.setup(23, iop.IN, pull_up_down=iop.PUD_UP) # 23 is going to intiate the pin config script
+iop.setup(18, iop.IN, pull_up_down=iop.PUD_UP) # 18 is setup seperatly for OS toggle switch
 
 def lstscn (l, n):
 	fls = 0
