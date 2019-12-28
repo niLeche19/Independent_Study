@@ -9,3 +9,4 @@ cansend = 1
 for i in pins:
 	iop.setup(i, iop.IN)
 	#, pull_up_down=iop.PUD_UP
+iop.setup(2, iop.IN, pull_up_down=iop.PUD_UP)
