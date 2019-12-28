@@ -1,7 +1,7 @@
 import RPi.GPIO as iop
 iop.setmode(iop.BCM)
 
-pins = (2,3,4,17,22,27,10,9,11,20,5,6,13,19,26,21)
+pins = (4,17,22,27,10,9,11,20,5,6,13,19,26,21)
 
 keysdown = []
 cansend = 1
