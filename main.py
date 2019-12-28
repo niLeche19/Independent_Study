@@ -19,10 +19,7 @@ keysdown = []
 cansend = 1
 
 for i in pins:
-	if i < 4:
-		iop.setup(i, iop.IN)
-	else:
-		iop.setup(i, iop.IN, pull_up_down=iop.PUD_UP)
+	iop.setup(i, iop.IN, pull_up_down=iop.PUD_UP)
 
 # pull_up_down=iop.PUD_UP
 iop.setup(23, iop.IN) # 23 is going to intiate the pin config script
