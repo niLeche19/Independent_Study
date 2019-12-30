@@ -106,6 +106,9 @@ def screentwo(key):
 			except:
 				print(" Please input a number 1 - {}\n".format(len(tmplst)))
 				screentwo(key)
+		elif len(tmplst) == 1:
+			print(" There are no instances to modify here.\n ")
+			screentwo(key)
 		else:
 			wheree = 1
 			
