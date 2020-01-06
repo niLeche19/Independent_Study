@@ -67,7 +67,7 @@ def screentwo(key):
 ##########
 	elif nextt == 'q':
 		print(" Seeya later.")
-		#shutdown.cansend = 1
+		pass
 ##########
 	elif nextt == 'b':
 		screenone()
@@ -84,16 +84,20 @@ def screentwo(key):
 			try:
 				wheree = int(input(" Where would like to add the new key instance?\n "))
 			except:
-				print(" Please input a number 1 - {}\n".format(len(tmplst) - 1))
+				print(" Please input a number 1 - {}\n".format(len(tmplst)))
 				screentwo(key)
 		else:
 			wheree = 1
 		
 		try:	
 			ac = input(" What character would you like to add?\n ")
-			tmplst.insert(wheree - 1, [0,int(combos[ac])])
-			funcwrite.writeit(key, tmplst)
-			screentwo(key)
+			if ac > len(tmplst) - 1:
+				print(" Please input a number 1 - {}\n".format(len(tmplst)))
+				screentwo(key)
+			else:
+				tmplst.insert(wheree - 1, [0,int(combos[ac])])
+				funcwrite.writeit(key, tmplst)
+				screentwo(key)
 		except:
 			print(" Please input an alphanumerical.\n")
 			screentwo(key)
@@ -104,7 +108,7 @@ def screentwo(key):
 			try:
 				wheree = int(input(" Which instance would you like to add the modifier to? (1 - {}).\n ".format(len(tmplst))))
 			except:
-				print(" Please input a number 1 - {}\n".format(len(tmplst)))
+				print(" Please input a number 1 - {}\n".format(len(tmplst) - 1))
 				screentwo(key)
 		elif len(tmplst) == 1:
 			print(" There are no instances to modify here.\n ")
@@ -114,9 +118,13 @@ def screentwo(key):
 			
 		try:
 			am = input(" Which modifier would you like to add?\n ")
-			tmplst[wheree - 1][0] += int(combos[am])
-			funcwrite.writeit(key, tmplst)
-			screentwo(key)
+			if am > len(tmplst):
+				print(" Please input a number 1 - {}\n".format(len(tmplst) - 1))
+				screentwo(key)
+			else:
+				tmplst[wheree - 1][0] += int(combos[am])
+				funcwrite.writeit(key, tmplst)
+				screentwo(key)
 		except:
 			print(" Please input a valid modifier, see documentation for list of accepted mods.\n ")
 			screentwo(key)
@@ -145,26 +153,31 @@ def screentwo(key):
 			try:
 				wheree = int(imput(" Where would like to add the new key instance?\n "))
 			except:
-				print(" Please input a number 1 - {}\n".format(len(tmplst) ))
+				print(" Please input a number 1 - {}\n".format(len(tmplst)))
 				screentwo(key)
 		else:
 			wheree = 1
 		try:
-			ac = input(" Which character would you like to add?\n ")
-			am = input(" Which modifier would you like to add?\n ")
-			tmplst.insert(0,[int(combos[am]), int(combos[ac])])
-			funcwrite.writeit(key, tmplst)
-			screentwo(key)
+			if wheree < 1 or wheree > len(tmplst) - 1:
+				print(" Please input a number 1 - {}\n".format(len(tmplst)))
+				screentwo(key)
+			else:
+				ac = input(" Which character would you like to add?\n ")
+				am = input(" Which modifier would you like to add?\n ")
+				tmplst.insert(where - 1,[int(combos[am]), int(combos[ac])])
+				funcwrite.writeit(key, tmplst)
+				screentwo(key)
 		except:
 			print(" Please input a valid character/modifier, see documentation for list of valid chars/mods.\n ")
 			screentwo(key)
 ##########
-	elif nextt == 's':
+	elif nextt == 's'
+		"""
 		if len(tmplst) > 1:
 			wheree = input(" Where wpuld you like to add the string?\n ")
 		else:
 			wheree = 1
-		
+		"""
 		try:
 			strr = input(" Please enter your string.\n ")
 			for i in strr:
