@@ -91,7 +91,7 @@ def screentwo(key):
 		
 		try:	
 			ac = input(" What character would you like to add?\n ")
-			if wheree > len(tmplst) - 1:
+			if wheree > len(tmplst) - 1 and len(tmplst) > 1:
 				print(" Please input a number 1 - {}\n".format(len(tmplst)))
 				screentwo(key)
 			else:
@@ -158,7 +158,7 @@ def screentwo(key):
 		else:
 			wheree = 1
 		try:
-			if wheree < 1 or wheree > len(tmplst) - 1:
+			if wheree < 1 or (wheree > len(tmplst) - 1 and len(tmplst) > 1):
 				print(" Please input a number 1 - {}\n".format(len(tmplst)))
 				screentwo(key)
 			else:
