@@ -39,12 +39,6 @@ def lstscn (l, n):
 try:
 	while True:
 		sleep(0.01)
-		"""
-		if iop.input(23) == 0:
-			while iop.input(23) == 0:
-				time.sleep(0.02)
-			pinconfig.initiate()
-		"""
 		if iop.input(18) == 0: 
 			keys.OS = 1
 		elif iop.input(18) == 1:
