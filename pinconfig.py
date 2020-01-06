@@ -171,7 +171,7 @@ def screentwo(key):
 			print(" Please input a valid character/modifier, see documentation for list of valid chars/mods.\n ")
 			screentwo(key)
 ##########
-	elif nextt == 's'
+	elif nextt == 's':
 		"""
 		if len(tmplst) > 1:
 			wheree = input(" Where wpuld you like to add the string?\n ")
