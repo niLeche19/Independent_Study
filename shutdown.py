@@ -6,7 +6,7 @@ iop.setmode(iop.BCM)
 iop.setup(16, iop.IN, pull_up_down=iop.PUD_UP)
 
 while True:
-	sleep(0.02)
+	sleep(0.01)
 	if iop.input(16) == 0:
 		sleep(0.3)
 		if iop.input(16) == 0:
