@@ -38,7 +38,7 @@ def lstscn (l, n):
 
 try:
 	while True:
-		sleep(0.05)
+		sleep(0.01)
 		"""
 		if iop.input(23) == 0:
 			while iop.input(23) == 0:
