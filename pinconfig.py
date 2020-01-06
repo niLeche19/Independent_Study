@@ -91,7 +91,7 @@ def screentwo(key):
 		
 		try:	
 			ac = input(" What character would you like to add?\n ")
-			if ac > len(tmplst) - 1:
+			if wheree > len(tmplst) - 1:
 				print(" Please input a number 1 - {}\n".format(len(tmplst)))
 				screentwo(key)
 			else:
@@ -118,7 +118,7 @@ def screentwo(key):
 			
 		try:
 			am = input(" Which modifier would you like to add?\n ")
-			if am > len(tmplst):
+			if wheree > len(tmplst):
 				print(" Please input a number 1 - {}\n".format(len(tmplst) - 1))
 				screentwo(key)
 			else:
