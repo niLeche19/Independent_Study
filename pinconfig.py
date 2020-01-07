@@ -25,7 +25,7 @@ def screenone():
 	elif direc == 'e':
 		whichh = 0
 		try:
-			whichh = int(input(" Which key would you like to edit? (1-16)\n layout:\n 13  9  5  1\n 14 10  6  2\n 15 11  7  3\n 16 12  8  4"))
+			whichh = int(input(" Which key would you like to edit? (1-16)\n layout:\n 13  9  5  1\n 14 10  6  2\n 15 11  7  3\n 16 12  8  4\n "))
 		except:
 			print(" Please enter a number (1-16)\n ")
 			screenone()
