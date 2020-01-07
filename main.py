@@ -57,6 +57,7 @@ try:
 				if lstscn(keysdown, newi) == True:
 					if gamer == 1:
 						keys.funkysendit(1001, gamer)
+						del keysdown[:]
 					keysdown.remove(newi)
 
 finally:
