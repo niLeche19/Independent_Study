@@ -16,7 +16,7 @@ iop.setmode(iop.BCM)
 pins = (2,3,4,17,27,22,10,9,11,20,5,6,13,19,26,21)
 
 keysdown = []
-gamer = 1
+gamer = 0 # add a gamer mode switch to enable rapid fire presses of switches
 
 for i in pins:
 	iop.setup(i, iop.IN, pull_up_down=iop.PUD_UP)
