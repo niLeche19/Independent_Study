@@ -58,7 +58,8 @@ try:
 					if gamer == 1:
 						keys.funkysendit(1001, gamer)
 						del keysdown[:]
-					keysdown.remove(newi)
+					else:
+						keysdown.remove(newi)
 
 finally:
 	print ("Goodbye!")
