@@ -52,6 +52,8 @@ try:
 				if lstscn (keysdown, newi) == False:
 					keys.funkysendit(i, gamer)
 					keysdown.append(newi)
+				elif lstscn (keysdown, newi) == True:
+					keys.funkysendit(i, gamer)
 					
 			elif iop.input(newi) == 1: #checks list for released keys
 				if lstscn(keysdown, newi) == True:
