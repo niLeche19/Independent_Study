@@ -43,5 +43,5 @@ def funkysendit(key, g):
 	if key == 1001 and g == 1:
 		keyexc([[0,0]], 3)
 	else:
-		keyexc(key, g)
+		keyexc(funclist, g)
 
