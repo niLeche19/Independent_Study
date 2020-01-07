@@ -16,7 +16,7 @@ iop.setmode(iop.BCM)
 pins = (2,3,4,17,27,22,10,9,11,20,5,6,13,19,26,21)
 
 keysdown = []
-cansend = 1
+gamer = 1
 
 for i in pins:
 	iop.setup(i, iop.IN, pull_up_down=iop.PUD_UP)
@@ -50,12 +50,12 @@ try:
 			# operating system selector
 			if iop.input(newi) == 0: #checks list for pressed keys
 				if lstscn (keysdown, newi) == False:
-					if cansend == 1: # this is preventitave for if the config is open
-						keys.funkysendit(i)
+					keys.funkysendit(i, gamer)
 					keysdown.append(newi)
 					
 			elif iop.input(newi) == 1: #checks list for released keys
 				if lstscn(keysdown, newi) == True:
+					keys.funkysendit(1001, gamer)
 					keysdown.remove(newi)
 
 finally:
