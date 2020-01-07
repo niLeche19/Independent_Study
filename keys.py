@@ -39,9 +39,10 @@ def sendit(mod, char):
 		writeit(bytes([modOS, 0, char, 0, 0, 0, 0, 0]))
 
 def funkysendit(key, g):
-	funclist = funcread.readit(key)
-	if key == 1001 and g == 1:
+	
+	if key == 1001:
 		keyexc([[0,0]], 3)
 	else:
+		funclist = funcread.readit(key)
 		keyexc(funclist, g)
 
