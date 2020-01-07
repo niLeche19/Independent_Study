@@ -55,7 +55,8 @@ try:
 					
 			elif iop.input(newi) == 1: #checks list for released keys
 				if lstscn(keysdown, newi) == True:
-					keys.funkysendit(1001, gamer)
+					if gamer == 1:
+						keys.funkysendit(1001, gamer)
 					keysdown.remove(newi)
 
 finally:
