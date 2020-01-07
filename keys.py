@@ -15,10 +15,14 @@ def writeit(report):
         fd.write(report)
 
 #executes the list of keystrokes
-def keyexc(wlst):
-	#print(len(wlst))
+def keyexc(wlst, gg):
 	for i in range(len(wlst)):
-		sendit(wlst[i][0], wlst[i][1])
+		if wlst[i] == [0,0] and gg == 1:
+			pass
+		elif wlst[i] == [0,0] and gg != 1:
+			sendit(wlst[i][0], wlst[i][1])
+		else:
+			sendit(wlst[i][0], wlst[i][1])
 
 #send it
 def sendit(mod, char):
@@ -34,8 +38,10 @@ def sendit(mod, char):
 	else:
 		writeit(bytes([modOS, 0, char, 0, 0, 0, 0, 0]))
 
-def funkysendit(key):
+def funkysendit(key, g):
 	funclist = funcread.readit(key)
-	#print(funclist)
-	keyexc(funclist)
+	if key == 1001 and g == 1:
+		keyexc([[0,0]], 3)
+	else:
+		keyexc(key, g)
 
