@@ -80,7 +80,7 @@ try:
 
 finally:
 	del lines[len(lines) - 1]
-	lines.append(whichset)
+	lines.append(keyset)
 	with open('kc.txt', 'w') as wee:
 		wee.writelines(lines)
 	print ("Goodbye!")
