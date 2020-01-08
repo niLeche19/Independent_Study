@@ -53,7 +53,7 @@ try:
 			else:
 				keyset += 1
 				
-		print(iop.input(23), keyset)
+		print(iop.input(23), keyset, (16 * keyset))
 		
 		for i in range(len(pins)):
 			newi = pins[i]
