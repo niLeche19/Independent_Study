@@ -32,11 +32,15 @@ iop.setup(23, iop.IN, pull_up_down=iop.PUD_UP) # 23 is going to change what conf
 iop.setup(18, iop.IN, pull_up_down=iop.PUD_UP) # 18 is setup seperatly for OS toggle switch
 
 def flashh(rep):
+	iop.output(14, 0)
+	sleep(0.5)
 	for i in range(rep):
 		sleep(0.2)
 		iop.output(14, 1)
 		sleep(0.2)
 		iop.output(14, 0)
+	sleep(0.5)
+	iop.output(14, 1)
 		
 def lstscn (l, n):
 	fls = 0
