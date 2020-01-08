@@ -43,7 +43,7 @@ def screenone():
 			print(" Please enter a number (1-16)\n ")
 			screenone()
 		
-		else: screentwo((whichh - 1) + ((whichset - 1) * 16), whichset)
+		else: screentwo((whichh - 1) + ((whichset - 1) * 16), whichset - 1)
 
 	elif direc == 'p':
 		try:
