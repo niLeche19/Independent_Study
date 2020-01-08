@@ -27,10 +27,11 @@ for i in pins:
 	iop.setup(i, iop.IN, pull_up_down=iop.PUD_UP)
 
 # pull_up_down=iop.PUD_UP
-iop.setup(14, iop.OUT)
+iop.setup(14, iop.OUT) # make the power button flash to the keyset
 iop.setup(23, iop.IN, pull_up_down=iop.PUD_UP) # 23 is going to change what config set you are on
 iop.setup(18, iop.IN, pull_up_down=iop.PUD_UP) # 18 is setup seperatly for OS toggle switch
-def flash(rep):
+
+def flashh(rep):
 	for i in range(rep):
 		sleep(0.2)
 		iop.output(14, 1)
@@ -63,7 +64,8 @@ try:
 				keyset = 0
 			else:
 				keyset += 1
-
+			flashh(keyset + 1)
+			
 		for i in range(len(pins)):
 			newi = pins[i]
 			fals = 1
