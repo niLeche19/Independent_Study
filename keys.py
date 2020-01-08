@@ -1,12 +1,6 @@
 #this file contains the coded needed to send key reports
 
 import funcread
-import RPi.GPIO as iop
-iop.setmode(iop.BCM)
-
-# 12 is setup seperatly for OS toggle switch
-iop.setup(12, iop.IN, pull_up_down=iop.PUD_UP)
-# 1 in windows and 0 is OSX. It switches between ctrl and meta(win/cmd)
 OS = 2
 
 #write it
@@ -33,6 +27,7 @@ def sendit(mod, char):
 	elif mod == 8 and OS == 0:
 		modOS = 16
 	else: modOS = mod
+
 	if mod == 0:
 		writeit(bytes([0, 0, char, 0, 0, 0, 0, 0]))
 	else:
