@@ -12,7 +12,7 @@ def initiate():
 def screenone():
 	direc = input(" ")
 	if direc == 'h':
-		print(" h   : Help. \n q   : Quit.\n e   : Edit a key.\n b   : Go back to main screen.")
+		print(" h   : Help. \n q   : Quit.\n e   : Edit a set.\n b   : Go back to main screen.")
 		screenone()
 	
 	elif direc == 'q':
@@ -24,6 +24,12 @@ def screenone():
 		
 	elif direc == 'e':
 		whichh = 0
+		whichset = 0
+		try:
+			whichset = int(input(" Which keyset would you like to edit? (1-4)\n "))
+		except:
+			print(" Please enter a number (1-4)\n ")
+			screenone()
 		try:
 			whichh = int(input(" Which key would you like to edit? (1-16)\n layout:\n 13  9  5  1\n 14 10  6  2\n 15 11  7  3\n 16 12  8  4\n "))
 		except:
@@ -34,7 +40,12 @@ def screenone():
 			print(" Please enter a number (1-16)\n ")
 			screenone()
 		
-		else: screentwo(whichh - 1)
+		if whichset < 1 or whichset > 4:
+			print(" Please enter a number (1-4)\n ")
+			screenone()
+		
+		else: screentwo((whichh - 1) + ((whichset - 1) * 16))
+
 	elif direc == 'p':
 		try:
 			whichh = int(input(" Which key would you like to print? (1 - 16)\n "))
