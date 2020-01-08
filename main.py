@@ -61,10 +61,10 @@ try:
 			# operating system selector
 			if iop.input(newi) == 0: #checks list for pressed keys
 				if lstscn (keysdown, newi) == False:
-					keys.funkysendit(i, gamer)
+					keys.funkysendit(i + (keyset * 16), gamer)
 					keysdown.append(newi)
 				elif lstscn (keysdown, newi) == True and gamer == 1:
-					keys.funkysendit(i, gamer)
+					keys.funkysendit(i + (keyset * 16), gamer)
 					
 			elif iop.input(newi) == 1: #checks list for released keys
 				if lstscn(keysdown, newi) == True:
