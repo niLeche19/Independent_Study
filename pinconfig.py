@@ -10,6 +10,7 @@ def initiate():
 	screenone()
 	
 def screenone():
+	global whichset
 	direc = input(" ")
 	if direc == 'h':
 		print(" h   : Help. \n q   : Quit.\n e   : Edit a set.\n b   : Go back to main screen.")
@@ -66,6 +67,7 @@ def screenone():
 		screenone()
 
 def screentwo(key):
+	global whichset
 	print(" Editting key {} in set {}. Press h for help.\n ".format((key + 1) - ((whichset - 1) * 16), whichset))
 	nextt = input(" ")
 	tmplst = funcread.readit(key)
