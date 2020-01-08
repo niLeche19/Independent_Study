@@ -27,9 +27,16 @@ for i in pins:
 	iop.setup(i, iop.IN, pull_up_down=iop.PUD_UP)
 
 # pull_up_down=iop.PUD_UP
+iop.setup(14, iop.OUT)
 iop.setup(23, iop.IN, pull_up_down=iop.PUD_UP) # 23 is going to change what config set you are on
 iop.setup(18, iop.IN, pull_up_down=iop.PUD_UP) # 18 is setup seperatly for OS toggle switch
-
+def flash(rep):
+	for i in range(rep):
+		sleep(0.2)
+		iop.output(14, 1)
+		sleep(0.2)
+		iop.output(14, 0)
+		
 def lstscn (l, n):
 	fls = 0
 	if l != []: #check for empty list
