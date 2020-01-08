@@ -40,7 +40,7 @@ def screenone():
 			print(" Please enter a number (1-16)\n ")
 			screenone()
 		
-		if whichset < 1 or whichset > 4:
+		elif whichset < 1 or whichset > 4:
 			print(" Please enter a number (1-4)\n ")
 			screenone()
 		
