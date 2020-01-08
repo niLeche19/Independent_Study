@@ -17,12 +17,13 @@ pins = (2,3,4,17,27,22,10,9,11,20,5,6,13,19,26,21)
 
 keysdown = []
 gamer = 0 # add a gamer mode switch to enable rapid fire presses of switches
+keyset = 0
 
 for i in pins:
 	iop.setup(i, iop.IN, pull_up_down=iop.PUD_UP)
 
 # pull_up_down=iop.PUD_UP
-iop.setup(23, iop.IN, pull_up_down=iop.PUD_UP) # 23 is going to intiate the pin config script
+iop.setup(23, iop.IN, pull_up_down=iop.PUD_UP) # 23 is going to change what config set you are on
 iop.setup(18, iop.IN, pull_up_down=iop.PUD_UP) # 18 is setup seperatly for OS toggle switch
 
 def lstscn (l, n):
@@ -43,6 +44,16 @@ try:
 			keys.OS = 1
 		elif iop.input(18) == 1:
 			keys.OS = 0
+		
+		if iop.input(23) == 0:
+			while iop.input == 0:
+				sleep(0.01)
+			if keyset == 3:
+				keyset = 0
+			else:
+				keyset += 1
+				
+		print(iop.input(23), keyset)
 		
 		for i in range(len(pins)):
 			newi = pins[i]
