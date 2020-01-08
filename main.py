@@ -21,7 +21,7 @@ keyset = 0
 lines = []
 with open('kc.txt', 'r') as ree:
 	lines = ree.readlines()
-	keyset = lines[len(lines) - 1]
+	keyset = int(lines[len(lines) - 1])
 
 for i in pins:
 	iop.setup(i, iop.IN, pull_up_down=iop.PUD_UP)
