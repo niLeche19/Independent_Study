@@ -46,7 +46,7 @@ try:
 			keys.OS = 0
 		
 		if iop.input(23) == 0:
-			while iop.input == 0:
+			while iop.input(23) == 0:
 				sleep(0.01)
 			if keyset == 3:
 				keyset = 0
