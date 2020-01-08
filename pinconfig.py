@@ -43,7 +43,7 @@ def screenone():
 			print(" Please enter a number (1-16)\n ")
 			screenone()
 		
-		else: screentwo((whichh - 1) + ((whichset - 1) * 16))
+		else: screentwo((whichh - 1) + ((whichset - 1) * 16), whichset)
 
 	elif direc == 'p':
 		try:
@@ -65,8 +65,8 @@ def screenone():
 		print(" Press 'h' for help.")
 		screenone()
 
-def screentwo(key):
-	print(" Editting key {}. Press h for help.\n ".format(key + 1))
+def screentwo(key, sett):
+	print(" Editting key {} in set {}. Press h for help.\n ".format((key + 1) - (sett * 16), sett))
 	nextt = input(" ")
 	tmplst = funcread.readit(key)
 	print(" Key contents: {}\n".format(tmplst[:len(tmplst) - 1]))
