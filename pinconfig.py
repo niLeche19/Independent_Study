@@ -66,7 +66,7 @@ def screenone():
 		screenone()
 
 def screentwo(key, sett):
-	print(" Editting key {} in set {}. Press h for help.\n ".format((key + 1) - (sett * 16), sett))
+	print(" Editting key {} in set {}. Press h for help.\n ".format((key + 1) - (sett * 16), sett + 1))
 	nextt = input(" ")
 	tmplst = funcread.readit(key)
 	print(" Key contents: {}\n".format(tmplst[:len(tmplst) - 1]))
@@ -174,7 +174,7 @@ def screentwo(key, sett):
 			else:
 				ac = input(" Which character would you like to add?\n ")
 				am = input(" Which modifier would you like to add?\n ")
-				tmplst.insert(where - 1,[int(combos[am]), int(combos[ac])])
+				tmplst.insert(where,[int(combos[am]), int(combos[ac])])
 				funcwrite.writeit(key, tmplst)
 				screentwo(key)
 		except:
