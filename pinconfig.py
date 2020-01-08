@@ -25,12 +25,9 @@ def screenone():
 	elif direc == 'e':
 		whichh = 0
 		whichset = 0
+	
 		try:
 			whichset = int(input(" Which keyset would you like to edit? (1-4)\n "))
-		except:
-			print(" Please enter a number (1-4)\n ")
-			screenone()
-		try:
 			whichh = int(input(" Which key would you like to edit? (1-16)\n layout:\n 13  9  5  1\n 14 10  6  2\n 15 11  7  3\n 16 12  8  4\n "))
 		except:
 			print(" Please enter a number (1-16)\n ")
