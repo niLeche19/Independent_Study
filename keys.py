@@ -20,14 +20,14 @@ def keyexc(wlst, gg):
 
 #send it
 def sendit(mod, char):
-	modOS = 16
-	
-	if mod == 16 and OS == 1:
+	modOS = 1
+	"""
+	if mod == 1 and OS == 1:
 		modOS = 8
 	elif mod == 8 and OS == 0:
-		modOS = 16
+		modOS = 1
 	else: modOS = mod
-
+	"""
 	if mod == 0:
 		writeit(bytes([0, 0, char, 0, 0, 0, 0, 0]))
 	else:
