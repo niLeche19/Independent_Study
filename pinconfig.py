@@ -163,7 +163,7 @@ def screentwo(key):
 	elif nextt == 'mc':
 		if len(tmplst) > 1:
 			try:
-				wheree = int(input(" Where would like to add the new key instance? (1-{})\n ".format(len(tmplst) - 1)))
+				wheree = int(input(" Where would like to add the new key instance? (1-{})\n ".format(len(tmplst))))
 			except:
 				print(" Please input a number 1 - {}\n".format(len(tmplst)))
 				screentwo(key)
