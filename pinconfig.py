@@ -163,7 +163,7 @@ def screentwo(key):
 	elif nextt == 'mc':
 		if len(tmplst) > 1:
 			try:
-				wheree = int(input(" Where would like to add the new key instance?\n "))
+				wheree = int(input(" Where would like to add the new key instance? (1-{})\n ".format(len(tmplst) - 1)))
 			except:
 				print(" Please input a number 1 - {}\n".format(len(tmplst)))
 				screentwo(key)
@@ -191,7 +191,7 @@ def screentwo(key):
 			wheree = 1
 		"""
 		try:
-			strr = input(" Please enter your string.\n ")
+			strr = input(" Please enter a string of lowercase alphanumericals. (a-z and 0-9, A-Z not accepted)\n ")
 			for i in strr:
 				tmplst.insert(len(tmplst) - 1, [0,combos[i]])
 			funcwrite.writeit(key, tmplst)
