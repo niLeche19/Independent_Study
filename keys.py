@@ -31,7 +31,7 @@ def sendit(mod, char):
 	if mod == 0:
 		writeit(bytes([0, 0, char, 0, 0, 0, 0, 0]))
 	else:
-		writeit(bytes([modOS, 0, char, 0, 0, 0, 0, 0]))
+		writeit(bytes([mod, 0, char, 0, 0, 0, 0, 0]))
 
 def funkysendit(key, g):
 	
