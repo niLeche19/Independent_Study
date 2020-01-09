@@ -176,7 +176,7 @@ def screentwo(key):
 			else:
 				ac = input(" Which character would you like to add?\n ")
 				am = input(" Which modifier would you like to add?\n ")
-				tmplst.insert(where,[int(combos[am]), int(combos[ac])])
+				tmplst.insert(wheree - 1,[int(combos[am]), int(combos[ac])])
 				funcwrite.writeit(key, tmplst)
 				screentwo(key)
 		except:
