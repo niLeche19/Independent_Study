@@ -30,7 +30,7 @@ for i in pins:
 iop.setup(14, iop.OUT) # make the power button flash to the keyset
 iop.setup(23, iop.IN, pull_up_down=iop.PUD_UP) # 23 is going to change what config set you are on
 iop.setup(18, iop.IN, pull_up_down=iop.PUD_UP) # 18 is setup seperatly for OS toggle switch
-iop.output(14, 1)
+#iop.output(14, 1)
 
 def flashh(rep):
 	iop.output(14, 0)
