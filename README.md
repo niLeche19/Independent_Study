@@ -4,4 +4,5 @@ This repository contains the file that were used to create the Macro keyboard fo
 
 ## Specifications of keys and modifiers
 
-###Keys
+  ### Keys
+  A key is simple a lower case letter or number such as, a-z and 0-9, as well as most special characters such as * !@#";:{}() *
