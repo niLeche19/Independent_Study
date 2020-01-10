@@ -4,4 +4,4 @@ This repository contains the file that were used to create the Macro keyboard fo
 
 ## Specifications of keys and modifiers
 
-	###Keys
+###Keys
